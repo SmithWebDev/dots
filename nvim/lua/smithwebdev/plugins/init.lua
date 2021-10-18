@@ -17,11 +17,14 @@ packer.init {
 
 local plugins = {
   -- Keybinds
-  "mapx", -- https://github.com/b0o/mapx.nvim
+  'mapx', -- https://github.com/b0o/mapx.nvim
 
   -- Completion
-  "coq",  -- https://github.com/ms-jpq/coq_nvim
-  "emmet",
+  'coq',  -- https://github.com/ms-jpq/coq_nvim
+  'emmet',
+
+  -- Navigator
+  'navigator',
 }
 
 packer.startup(function(use)
