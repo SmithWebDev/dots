@@ -3,8 +3,6 @@ local M = {}
 M.plugin = {
   'ms-jpq/coq_nvim',
 
-  opt = false,
-
   -- This plugin requires that the following plugins be loaded BEFORE coq_nvim
   requires = {
     'ms-jpq/coq.artifacts',
