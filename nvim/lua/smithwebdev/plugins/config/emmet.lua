@@ -1,16 +1,12 @@
 local M = {}
 
 M.plugin = {
-  "mattn/emmet-vim",
+  'mattn/emmet-vim',
+
   setup = function()
-    require('config.emmet').config()
+    -- emmet leader key
+    vim.g.user_emmet_leader_key = ','
   end
 }
-
-M.config = function ()
-  require'emmet'.config{
-    user_emmet_leader_key = ','
-  }
-end
 
 return M

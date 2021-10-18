@@ -9,13 +9,19 @@ end
 
 local packer = require'packer'
 
-local plugins = {
-  -- Completion
-  "coq",  --https://github.com/ms-jpq/coq_nvim
-  "emmet",
+-- Use your local data path and not plugin/
+-- this is `~/.local/share/nvim/packer_compiled.lua` in WSL/Linux and MacOS
+packer.init {
+  compile_path = vim.fn.stdpath('data') .. '/packer_compiled.lua'
+}
 
+local plugins = {
   -- Keybinds
-  "mapx"  --https://github.com/b0o/mapx.nvim
+  "mapx", -- https://github.com/b0o/mapx.nvim
+
+  -- Completion
+  "coq",  -- https://github.com/ms-jpq/coq_nvim
+  "emmet",
 }
 
 packer.startup(function(use)

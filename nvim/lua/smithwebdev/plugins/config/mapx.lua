@@ -2,16 +2,14 @@ local M = {}
 
 M.plugin = {
   'b0o/mapx.nvim',
-  --config = function()
-  --  require('config.mapx').config()
-  --end
-}
 
-M.config = function()
+  -- Setup mapx.nvim settings AFTER the plugin (mapx.nvim) is loaded
+  config = function()
     require'mapx'.setup {
       global = true,
-      whichkey = false
+      whichkey = false,
     }
-end
+  end
+}
 
 return M

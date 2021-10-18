@@ -57,4 +57,4 @@ vim.api.nvim_set_keymap('n', '<leader>-', '<C-w>s', default_opts) --(, 'Window S
 vim.api.nvim_set_keymap('n', '<leader>q', '<C-w>q', default_opts) --(, 'Window Close')
 vim.api.nvim_set_keymap('n', '<leader>qa', '<C-w>Q', default_opts) --(, 'Window Close')
 
-print('Keymaps connected')
+-- print('Keymaps connected')

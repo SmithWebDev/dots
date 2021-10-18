@@ -74,4 +74,4 @@ o.clipboard='unnamedplus'
 o.completefunc='emoji#complete'
 --command'set tags+=gems.tags'
 
-print('Settings connected')
+-- print('Settings connected')

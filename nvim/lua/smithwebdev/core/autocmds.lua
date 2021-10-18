@@ -43,4 +43,4 @@ auto(
 
         --let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify', 'calendar', 'text', 'help', 'Trouble', 'tutor', 'Neoformat', 'lspinfo', 'any-jump', 'tsplayground', 'orgagenda', 'gina-branch', 'lazygit','LspSagaCodeAction']
 
-print('Autocommands connected')
+-- print('Autocommands connected')

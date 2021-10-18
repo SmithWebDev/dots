@@ -1,42 +1,37 @@
 local M = {}
---local m = require'mapx'.setup{ global = true }
 
 M.plugin = {
   'ms-jpq/coq_nvim',
-  'ms-jpq/coq.artifacts',
-  --'m.setups-jpq/coq.thirdparty'
-  config = function()
-    require('config.coq').config()
-    --config()
-  end
-}
-M.config = function()
-  --require'coq'.setup{
+  requires = {
+    'ms-jpq/coq.artifacts',
+    -- 'ms-jpq/coq.thirdparty',
+  },
+
+  -- Make sure this plugin (coq.nvim) is loaded AFTER mapx is loaded
+  after = 'mapx.nvim',
+
+  -- Setup coq.nvim settings BEFORE the plugin (coq.nvim) is loaded
+  setup = function()
     vim.g.coq_settings = {
-      auto_start = 'shut-up',
+      auto_start = true,
       keymap = {
         recommended = false,
-        --jump_to_mark = '<c-space>'
+        jump_to_mark = '<c-space>'
       },
-    --}
-  
-  --keybindings
-  --inoremap('<Esc>', [[pumvisible() ? "\<C-e><Esc>" : "\<Esc>"]])
-  --inoremap('<C-c>', [[pumvisible() ? "\<C-e><C-c>" : "\<C-c>"]])
-  --inoremap('<BS>', [[pumvisible() ? "\<C-e><BS>"  : "\<BS>"]])
-  --inoremap('jj', [[pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "jj"]])
-  --inoremap('<c-j>', [[pumvisible() ? "\<C-n>" : "\<c-j>"]], 'silent', 'expr')
-  --inoremap('<c-k>', [[pumvisible() ? "\<C-p>" : "\<c-k>"]], 'silent', 'expr')
-  print('coq settings loaded')
-}
-end
+    }
+  end,
 
---local vim.g.coq_settings = {
---    'auto_start': 'shut-up',
---    'keymap': {
---      'recommended': 'false',
---      'jump_to_mark': '<c-CR>'
---    }
---  }
+  -- Setup coq.nvim settings AFTER the plugin (coq.nvim) is loaded
+  config = function()
+    -- keybindings
+    inoremap('<Esc>', [[pumvisible() ? "\<C-e><Esc>" : "\<Esc>"]], 'silent', 'expr')
+    inoremap('<C-c>', [[pumvisible() ? "\<C-e><C-c>" : "\<C-c>"]], 'silent', 'expr')
+    inoremap('<BS>', [[pumvisible() ? "\<C-e><BS>"  : "\<BS>"]], 'silent', 'expr')
+    inoremap('jj', [[pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "jj"]], 'silent', 'expr')
+    inoremap('<c-j>', [[pumvisible() ? "\<C-n>" : "\<c-j>"]], 'silent', 'expr')
+    inoremap('<c-k>', [[pumvisible() ? "\<C-p>" : "\<c-k>"]], 'silent', 'expr')
+    -- print('coq settings loaded')
+  end
+}
 
 return M
