@@ -2,6 +2,10 @@ local M = {}
 
 M.plugin = {
   'ms-jpq/coq_nvim',
+
+  opt = false,
+
+  -- This plugin requires that the following plugins be loaded BEFORE coq_nvim
   requires = {
     'ms-jpq/coq.artifacts',
     -- 'ms-jpq/coq.thirdparty',
@@ -16,7 +20,7 @@ M.plugin = {
       auto_start = true,
       keymap = {
         recommended = false,
-        jump_to_mark = '<c-space>'
+        jump_to_mark = '<c-space>',
       },
     }
   end,
@@ -30,7 +34,6 @@ M.plugin = {
     inoremap('jj', [[pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "jj"]], 'silent', 'expr')
     inoremap('<c-j>', [[pumvisible() ? "\<C-n>" : "\<c-j>"]], 'silent', 'expr')
     inoremap('<c-k>', [[pumvisible() ? "\<C-p>" : "\<c-k>"]], 'silent', 'expr')
-    -- print('coq settings loaded')
   end
 }
 

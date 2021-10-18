@@ -4,7 +4,9 @@ M.plugin = {
   'mattn/emmet-vim',
 
   setup = function()
-    -- emmet leader key
+    -- There is no setup() function for emmet-vim
+    -- use `vim.g` wherever you see `let g:`
+    -- in the emmet-vim repo
     vim.g.user_emmet_leader_key = ','
   end
 }
