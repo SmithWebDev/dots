@@ -12,7 +12,7 @@ local packer = require'packer'
 -- Use your local data path and not plugin/
 -- this is `~/.local/share/nvim/packer_compiled.lua` in WSL/Linux and MacOS
 packer.init {
-  compile_path = vim.fn.stdpath('data') .. '/packer_compiled.lua'
+  compile_path = vim.fn.stdpath('data') .. '/site/plugin/packer_compiled.lua'
 }
 
 local plugins = {
