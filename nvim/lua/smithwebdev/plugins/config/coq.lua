@@ -9,10 +9,10 @@ M.plugin = {
     -- 'ms-jpq/coq.thirdparty',
   },
 
-  -- Make sure this plugin (coq.nvim) is loaded AFTER mapx is loaded
+  -- Make sure this plugin (coq_nvim) is loaded AFTER mapx is loaded
   after = 'mapx.nvim',
 
-  -- Setup coq.nvim settings BEFORE the plugin (coq.nvim) is loaded
+  -- Setup coq_nvim settings BEFORE the plugin (coq_nvim) is loaded
   setup = function()
     vim.g.coq_settings = {
       auto_start = true,
@@ -23,7 +23,7 @@ M.plugin = {
     }
   end,
 
-  -- Setup coq.nvim settings AFTER the plugin (coq.nvim) is loaded
+  -- Setup coq_nvim settings AFTER the plugin (coq_nvim) is loaded
   config = function()
     -- keybindings
     inoremap('<Esc>', [[pumvisible() ? "\<C-e><Esc>" : "\<Esc>"]], 'silent', 'expr')
