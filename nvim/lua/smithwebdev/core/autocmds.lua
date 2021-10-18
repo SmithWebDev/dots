@@ -34,7 +34,7 @@ auto(
   [[
     augroup autosave
         au!
-        let blacklist = []
+        let blacklist = ['packer']
         au BufEnter * if &filetype == "" | setlocal ft=text | endif
         au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 | silent w | endif
     augroup END

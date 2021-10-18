@@ -10,14 +10,18 @@ end
 local packer = require'packer'
 
 local plugins = {
-  --{"wbthomason/packer.nvim", opt = true },
-  {"coq"}
+  -- Completion
+  "coq",  --https://github.com/ms-jpq/coq_nvim
+  "emmet",
+
+  -- Keybinds
+  "mapx"  --https://github.com/b0o/mapx.nvim
 }
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   for _, v in pairs(plugins) do
-    require('plugins.'..v).plugin
+    use(require('smithwebdev.plugins.config.'..v).plugin)
   end
 end)

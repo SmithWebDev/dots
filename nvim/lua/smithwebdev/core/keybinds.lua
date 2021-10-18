@@ -22,6 +22,8 @@ vim.api.nvim_set_keymap("n", "<leader><CR>", "<cmd>noh<CR>", default_opts) --(, 
 
 -- Resize Window Panes
 ----------------------------------------
+-- Resize Window Panes
+----------------------------------------
 vim.api.nvim_set_keymap('n', '<up>', ':resize +2<CR>', default_opts) --(, 'Resize Window Up)
 vim.api.nvim_set_keymap('n', '<down>', ':resize -2<CR>', default_opts) --(, 'Resize Window Down)
 vim.api.nvim_set_keymap('n', '<left>', ':vertical resize +2<CR>', default_opts) --(, 'Resize Window Left)
@@ -29,8 +31,6 @@ vim.api.nvim_set_keymap('n', '<right>', ':vertical resize -2<CR>', default_opts)
 
 -- Tabs
 ----------------------------------------
-vim.api.nvim_set_keymap('n', '<Tab>', ':tabnext<CR>', default_opts) --(, 'Goto Tab Next')
-vim.api.nvim_set_keymap('n', '<S-Tab>', ':tabprev<CR>', default_opts) --(, 'Goto Tab Previous')
 vim.api.nvim_set_keymap('n', '<leader>tc', ':tabc<CR>', default_opts) --(, 'Close Tab')
 vim.api.nvim_set_keymap('n', '<leader>te', ':tabedit %<CR>', default_opts) --(, 'Edit File in Tab')
 vim.api.nvim_set_keymap('n', '<leader>th', ':tabfirst<CR>', default_opts) --(, 'Goto Tab First')
@@ -55,5 +55,6 @@ vim.api.nvim_set_keymap('n', '<leader>\\', '<C-w>v', default_opts) --(, 'Window 
 vim.api.nvim_set_keymap('n', '<leader>-', '<C-w>s', default_opts) --(, 'Window Split Horizonatally')
 
 vim.api.nvim_set_keymap('n', '<leader>q', '<C-w>q', default_opts) --(, 'Window Close')
+vim.api.nvim_set_keymap('n', '<leader>qa', '<C-w>Q', default_opts) --(, 'Window Close')
 
 print('Keymaps connected')

@@ -32,96 +32,10 @@ P = function(stuff)
   return stuff
 end
 
-local function key_mapper(mode, lhs, rhs, opts, is_buf)
-  local has_opts = opts ~= nil and not vim.tbl_isempty(opts)
-  local default_opts = {
-    noremap = true,
-    silent = true,
-  }
-
-  if is_buf ~= nil and is_buf == true then
-    if has_opts then
-      vim.api.nvim_buf_set_keymap(0, mode, lhs, rhs, vim.tbl_extend('force', default_opts, opts))
-    else
-      vim.api.nvim_buf_set_keymap(0, mode, lhs, rhs, default_opts)
-    end
-  else
-    if has_opts then
-      vim.api.nvim_set_keymap(mode, lhs, rhs, vim.tbl_extend('force', default_opts, opts))
-    else
-      vim.api.nvim_set_keymap(mode, lhs, rhs, default_opts)
-    end
-  end
-end
-
-function Util.keymap(mode, lhs, rhs, opts)
-  key_mapper(mode, lhs, rhs, opts, false)
-end
-
-function Util.buf_keymap(mode, lhs, rhs, opts)
-  key_mapper(mode, lhs, rhs, opts, true)
-end
+--================================================================================
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- Taken from Elianiva dotfiles
-Util.trigger_completion = function()
-  -- TODO: rewrite pumvisible function for use with coq
-
-  --if fn.pumvisible() ~= 0 and fn.complete_info()["selected"] ~= -1 then
-  --  local e = core.menu:get_selected_entry() or (core.menu:get_first_entry())
-  --  core.confirm(e, {
-  --    behavior = cmp.ConfirmBehavior.Replace,
-  --  }, function()
-  --    core.complete(
-  --      core.get_context { reason = types.cmp.ContextReason.TriggerOnly }
-  --    )
-  --  end)
-  --  return
-  --end
-
-  local prev_col, next_col = fn.col "." - 1, fn.col "."
-  local prev_char = fn.getline("."):sub(prev_col, prev_col)
-  local next_char = fn.getline("."):sub(next_col, next_col)
-
-  -- minimal autopairs-like behaviour
-  if prev_char == "{" and next_char ~= "}" then
-    return Util.t "<CR>}<C-o>O"
-  end
-  if prev_char == "[" and next_char ~= "]" then
-    return Util.t "<CR>]<C-o>O"
-  end
-  if prev_char == "(" and next_char ~= ")" then
-    return Util.t "<CR>)<C-o>O"
-  end
-  if prev_char == ">" and next_char == "<" then
-    return Util.t "<CR><C-o>O"
-  end -- html indents
-  if prev_char == "(" and next_char == ")" then
-    return Util.t "<CR><C-o>O"
-  end -- flutter indents
-
-  return Util.t "<CR>"
-end
-
-return Util
-
-
--- TAKEN FROM ASTRONAUTA.NVIM
+ --TAKEN FROM ASTRONAUTA.NVIM
 
 --local keymap = {}
 --
@@ -224,6 +138,7 @@ return Util
 --function keymap.nnoremap(opts)
 --  return make_mapper('n', { noremap = true }, opts)
 --end
+--_G.nnoremap = keymap.nnoremap
 --
 ----- Helper function for ':vmap'.
 -----
@@ -232,6 +147,7 @@ return Util
 --function keymap.vmap(opts)
 --  return make_mapper('v', { noremap = false }, opts)
 --end
+--_G.vmap = keymap.vmap
 --
 ----- Helper function for ':vnoremap'
 ----@see |vim.keymap.nmap|
@@ -239,6 +155,7 @@ return Util
 --function keymap.vnoremap(opts)
 --  return make_mapper('v', { noremap = true }, opts)
 --end
+--_G.vnoremap = keymap.vnoremap
 --
 ----- Helper function for ':xmap'.
 -----
@@ -247,6 +164,7 @@ return Util
 --function keymap.xmap(opts)
 --  return make_mapper('x', { noremap = false }, opts)
 --end
+--_G.xmap = keymap.xmap
 --
 ----- Helper function for ':xnoremap'
 ----@see |vim.keymap.nmap|
@@ -254,6 +172,7 @@ return Util
 --function keymap.xnoremap(opts)
 --  return make_mapper('x', { noremap = true }, opts)
 --end
+--_G.xnoremap = keymap.xnoremap
 --
 ----- Helper function for ':smap'.
 -----
@@ -262,6 +181,7 @@ return Util
 --function keymap.smap(opts)
 --  return make_mapper('s', { noremap = false }, opts)
 --end
+--_G.smap = keymap.smap
 --
 ----- Helper function for ':snoremap'
 ----@see |vim.keymap.nmap|
@@ -269,6 +189,7 @@ return Util
 --function keymap.snoremap(opts)
 --  return make_mapper('s', { noremap = true }, opts)
 --end
+--_G.snoremap = keymap.snoremap
 --
 ----- Helper function for ':omap'.
 -----
@@ -277,6 +198,7 @@ return Util
 --function keymap.omap(opts)
 --  return make_mapper('o', { noremap = false }, opts)
 --end
+--_G.omap = keymap.omap
 --
 ----- Helper function for ':onoremap'
 ----@see |vim.keymap.nmap|
@@ -284,6 +206,7 @@ return Util
 --function keymap.onoremap(opts)
 --  return make_mapper('o', { noremap = true }, opts)
 --end
+--_G.onoremap = keymap.onoremap
 --
 ----- Helper function for ':imap'.
 -----
@@ -292,6 +215,7 @@ return Util
 --function keymap.imap(opts)
 --  return make_mapper('i', { noremap = false }, opts)
 --end
+--_G.imap = keymap.imap
 --
 ----- Helper function for ':inoremap'
 ----@see |vim.keymap.nmap|
@@ -299,6 +223,7 @@ return Util
 --function keymap.inoremap(opts)
 --  return make_mapper('i', { noremap = true }, opts)
 --end
+--_G.inoremap = keymap.inoremap
 --
 ----- Helper function for ':lmap'.
 -----
@@ -307,6 +232,7 @@ return Util
 --function keymap.lmap(opts)
 --  return make_mapper('l', { noremap = false }, opts)
 --end
+--_G.lmap = keymap.lmap
 --
 ----- Helper function for ':lnoremap'
 ----@see |vim.keymap.nmap|
@@ -314,6 +240,7 @@ return Util
 --function keymap.lnoremap(opts)
 --  return make_mapper('l', { noremap = true }, opts)
 --end
+--_G.lnoremap = keymap.lnoremap
 --
 ----- Helper function for ':cmap'.
 -----
@@ -322,6 +249,7 @@ return Util
 --function keymap.cmap(opts)
 --  return make_mapper('c', { noremap = false }, opts)
 --end
+--_G.cmap = keymap.cmap
 --
 ----- Helper function for ':cnoremap'
 ----@see |vim.keymap.nmap|
@@ -329,6 +257,7 @@ return Util
 --function keymap.cnoremap(opts)
 --  return make_mapper('c', { noremap = true }, opts)
 --end
+--_G.cnoremap = keymap.cnoremap
 --
 ----- Helper function for ':tmap'.
 -----
@@ -337,6 +266,7 @@ return Util
 --function keymap.tmap(opts)
 --  return make_mapper('t', { noremap = false }, opts)
 --end
+--_G.tmap = keymap.tmap
 --
 ----- Helper function for ':tnoremap'
 ----@see |vim.keymap.nmap|
@@ -344,7 +274,52 @@ return Util
 --function keymap.tnoremap(opts)
 --  return make_mapper('t', { noremap = true }, opts)
 --end
+--_G.tnoremap = keymap.tnoremap
 --
 --vim.keymap = vim.keymap or keymap
 --
 --return keymap
+
+
+
+-- Taken from Elianiva dotfiles
+--Util.trigger_completion = function()
+  -- TODO: rewrite pumvisible function for use with coq
+
+  --if fn.pumvisible() ~= 0 and fn.complete_info()["selected"] ~= -1 then
+  --  local e = core.menu:get_selected_entry() or (core.menu:get_first_entry())
+  --  core.confirm(e, {
+  --    behavior = cmp.ConfirmBehavior.Replace,
+  --  }, function()
+  --    core.complete(
+  --      core.get_context { reason = types.cmp.ContextReason.TriggerOnly }
+  --    )
+  --  end)
+  --  return
+  --end
+
+--  local prev_col, next_col = fn.col "." - 1, fn.col "."
+--  local prev_char = fn.getline("."):sub(prev_col, prev_col)
+--  local next_char = fn.getline("."):sub(next_col, next_col)
+--
+--  -- minimal autopairs-like behaviour
+--  if prev_char == "{" and next_char ~= "}" then
+--    return Util.t "<CR>}<C-o>O"
+--  end
+--  if prev_char == "[" and next_char ~= "]" then
+--    return Util.t "<CR>]<C-o>O"
+--  end
+--  if prev_char == "(" and next_char ~= ")" then
+--    return Util.t "<CR>)<C-o>O"
+--  end
+--  if prev_char == ">" and next_char == "<" then
+--    return Util.t "<CR><C-o>O"
+--  end -- html indents
+--  if prev_char == "(" and next_char == ")" then
+--    return Util.t "<CR><C-o>O"
+--  end -- flutter indents
+--
+--  return Util.t "<CR>"
+--end
+--
+--return Util
