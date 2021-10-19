@@ -27,7 +27,10 @@ local plugins = {
   'navigator', -- https://github.com/ray-x/navigator.lua
 
   -- Fuzzy File Finder
-  'telescope', -- https://github.com/nvim-telescope/telescope.nvim
+  -- 'telescope', -- https://github.com/nvim-telescope/telescope.nvim
+
+  -- Treesitter/Syntax Highlighting
+  'treesitter', -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)
