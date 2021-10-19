@@ -21,10 +21,13 @@ local plugins = {
 
   -- Completion
   'coq',  -- https://github.com/ms-jpq/coq_nvim
-  'emmet',
+  'emmet', -- https://github.com/mattn/emmet-vim
 
   -- Navigator
-  'navigator',
+  'navigator', -- https://github.com/ray-x/navigator.lua
+
+  -- Fuzzy File Finder
+  'telescope', -- https://github.com/nvim-telescope/telescope.nvim
 }
 
 packer.startup(function(use)
