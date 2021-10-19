@@ -4,7 +4,12 @@ M.plugin = {
   'nvim-telescope/telescope.nvim',
 
   -- This plugin requires that the following plugins be loaded BEFORE telescope.nvim
-  requires = 'nvim-lua/plenary.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim',
+    'nvim-telescope/telescope-media-files.nvim',
+    'nvim-telescope/telescope-frecency.nvim',
+    'nvim-telescope/telescope-fzy-native.nvim'
+    },
 
   -- Make sure this plugin (telescope.nvim) is loaded AFTER mapx is loaded
   after = 'mapx.nvim',
@@ -17,9 +22,17 @@ M.plugin = {
     telescope.setup({
       defaults = {
         layout_config = { prompt_position = 'top' },
-        layout_strategy = 'horizontal',
+        layout_strategy = 'flex',
         sorting_strategy = 'ascending',
         use_less = false,
+        path_display = 'smart',
+      },
+
+      extensions = {
+        fzy_native = {
+          override_generic_sorter = false,
+          override_file_sorter = true,
+        },
       },
     })
 
@@ -42,8 +55,11 @@ M.plugin = {
       })
     end
 
-    nnoremap('<C-p>', [[<Cmd>lua TelescopeFindFiles()<CR>]])
-    nnoremap('<C-t>', [[<Cmd>lua TelescopeLiveGrep()<CR>]])
+    nnoremap('<leader>fc', [[<Cmd>lua TelescopeFindConfigFiles()<CR>]])
+    nnoremap('<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]])
+    --nnoremap('<leader>fb', [[<Cmd>lua TelescopeFindFiles()<CR>]])
+    --nnoremap('<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]])
+    nnoremap('<leader>fl', [[<Cmd>lua TelescopeLiveGrep()<CR>]])
   end,
 }
 

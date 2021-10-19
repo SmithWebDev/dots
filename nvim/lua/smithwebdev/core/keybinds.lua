@@ -17,6 +17,8 @@ vim.api.nvim_set_keymap('n', 'L','$', default_opts) --(, 'Alternative End Line')
 vim.api.nvim_set_keymap('n', 'Y','yg_', default_opts) --(, 'Alternative Copy to End of Line')
 vim.api.nvim_set_keymap('i', '<c-j>','<c-n>', default_opts) --(, 'Alternative Cycle through options')
 vim.api.nvim_set_keymap('i', '<c-k>','<c-p>', default_opts) --(, 'Alternative Cycle through options')
+vim.api.nvim_set_keymap('n', '<','<<', default_opts) --(, 'Alternative Cycle through options')
+vim.api.nvim_set_keymap('n', '>','>>', default_opts) --(, 'Alternative Cycle through options')
 
 -- Disable Highlights
 ----------------------------------------
@@ -24,20 +26,28 @@ vim.api.nvim_set_keymap("n", "<leader><CR>", "<cmd>noh<CR>", default_opts) --(, 
 
 -- Resize Window Panes
 ----------------------------------------
--- Resize Window Panes
-----------------------------------------
 vim.api.nvim_set_keymap('n', '<up>', ':resize +2<CR>', default_opts) --(, 'Resize Window Up)
 vim.api.nvim_set_keymap('n', '<down>', ':resize -2<CR>', default_opts) --(, 'Resize Window Down)
 vim.api.nvim_set_keymap('n', '<left>', ':vertical resize +2<CR>', default_opts) --(, 'Resize Window Left)
 vim.api.nvim_set_keymap('n', '<right>', ':vertical resize -2<CR>', default_opts) --(, 'Resize Window Right)
+
+-- Rotate Window Panes
+----------------------------------------
+--vim.api.nvim_set_keymap('n', '<C-S-h>', '<C-w>H', default_opts) --(, 'Navigate Left')
+--vim.api.nvim_set_keymap('n', '<C-S-j>', '<C-w>J', default_opts) --(, 'Navigate Down')
+--vim.api.nvim_set_keymap('n', '<C-S-k>', '<C-w>K', default_opts) --(, 'Navigate Up')
+--vim.api.nvim_set_keymap('n', '<C-S-l>', '<C-w>L', default_opts) --(, 'Navigate Right')
 
 -- Tabs
 ----------------------------------------
 vim.api.nvim_set_keymap('n', '<leader>tc', ':tabc<CR>', default_opts) --(, 'Close Tab')
 vim.api.nvim_set_keymap('n', '<leader>te', ':tabedit %<CR>', default_opts) --(, 'Edit File in Tab')
 vim.api.nvim_set_keymap('n', '<leader>th', ':tabfirst<CR>', default_opts) --(, 'Goto Tab First')
+vim.api.nvim_set_keymap('n', '<leader>tj', ':tabN<CR>', default_opts) --(, 'Goto Tab Last')
+vim.api.nvim_set_keymap('n', '<leader>tk', ':tabp<CR>', default_opts) --(, 'Goto Tab Last')
 vim.api.nvim_set_keymap('n', '<leader>tl', ':tablast<CR>', default_opts) --(, 'Goto Tab Last')
 vim.api.nvim_set_keymap('n', '<leader>tn', ':tabnew<Space>', default_opts) --(, 'Goto Tab New')
+vim.api.nvim_set_keymap('n', '<leader>to', '<C-w>T', default_opts) --(, 'Open File In New Tab')
 vim.api.nvim_set_keymap('n', '<leader>tt', ':tabs', default_opts) --(, 'Show Tab List')
 
 -- Window Navigation

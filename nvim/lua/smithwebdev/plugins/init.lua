@@ -17,18 +17,22 @@ packer.init {
 
 local plugins = {
   -- Keybinds
-  'mapx', -- https://github.com/b0o/mapx.nvim
+  'mapx',       -- https://github.com/b0o/mapx.nvim
 
   -- Completion
-  'coq',  -- https://github.com/ms-jpq/coq_nvim
-  'emmet', -- https://github.com/mattn/emmet-vim
+  'coq',        -- https://github.com/ms-jpq/coq_nvim
+  'emmet',      -- https://github.com/mattn/emmet-vim
 
-  -- Navigator
-  'navigator', -- https://github.com/ray-x/navigator.lua
+  -- Editing
+  'surround',   --https://github.com/tpope/vim-surround
+  'easy_align', --https://github.com/junegunn/vim-easy-align
+
+  -- LSP Navigator
+  'navigator',  -- https://github.com/ray-x/navigator.lua
 
   -- Fuzzy File Finder
-  'fzy', --https://github.com/mfussenegger/nvim-fzy
-  -- 'telescope', -- https://github.com/nvim-telescope/telescope.nvim
+  -- 'fzy',     --https://github.com/mfussenegger/nvim-fzy
+  'telescope',  -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Treesitter/Syntax Highlighting
   'treesitter', -- https://github.com/nvim-treesitter/nvim-treesitter
