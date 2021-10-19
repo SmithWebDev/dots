@@ -27,6 +27,7 @@ local plugins = {
   'navigator', -- https://github.com/ray-x/navigator.lua
 
   -- Fuzzy File Finder
+  'fzy', --https://github.com/mfussenegger/nvim-fzy
   -- 'telescope', -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Treesitter/Syntax Highlighting

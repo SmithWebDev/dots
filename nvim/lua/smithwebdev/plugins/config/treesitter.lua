@@ -15,10 +15,14 @@ M.plugin = {
         'ruby',
         'html',
         'css',
+        'javascript',
         'go',
       },
       highlight = {
         enable = true, -- false will disable the whole extension
+      },
+      indent = {
+        enable = true,
       },
     }
   end,

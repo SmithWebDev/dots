@@ -11,7 +11,7 @@ local o = vim.opt
 o.completeopt = 'menuone,noinsert,noselect'
 o.shortmess = 'csa' --Adjust short system messages
 -- o.updatetime = 2000
-o.timeoutlen = 1500
+o.timeoutlen=500
 
 -- Fold Options --
 o.foldmethod = 'indent'
@@ -72,3 +72,4 @@ o.clipboard = 'unnamedplus'
 
 o.completefunc = 'emoji#complete'
 --command'set tags+ = gems.tags'
+print('Settings connected')

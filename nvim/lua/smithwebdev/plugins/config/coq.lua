@@ -15,10 +15,10 @@ M.plugin = {
   -- Setup coq_nvim settings BEFORE the plugin (coq_nvim) is loaded
   setup = function()
     vim.g.coq_settings = {
-      auto_start = true,
+      auto_start = 'shut-up',
       keymap = {
         recommended = false,
-        jump_to_mark = '<c-space>',
+        jump_to_mark = '<leader>j',
       },
     }
   end,
@@ -29,7 +29,7 @@ M.plugin = {
     inoremap('<Esc>', [[pumvisible() ? "\<C-e><Esc>" : "\<Esc>"]], 'silent', 'expr')
     inoremap('<C-c>', [[pumvisible() ? "\<C-e><C-c>" : "\<C-c>"]], 'silent', 'expr')
     inoremap('<BS>', [[pumvisible() ? "\<C-e><BS>"  : "\<BS>"]], 'silent', 'expr')
-    inoremap('jj', [[pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "jj"]], 'silent', 'expr')
+    inoremap('jk', [[pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "<Esc>"]], 'silent', 'expr')
     inoremap('<c-j>', [[pumvisible() ? "\<C-n>" : "\<c-j>"]], 'silent', 'expr')
     inoremap('<c-k>', [[pumvisible() ? "\<C-p>" : "\<c-k>"]], 'silent', 'expr')
   end

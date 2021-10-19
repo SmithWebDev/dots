@@ -15,6 +15,8 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>', default_opts) --(, 'Exit Insert Mode
 vim.api.nvim_set_keymap('n', 'H','0', default_opts) --(, 'Alternative Begin Line')
 vim.api.nvim_set_keymap('n', 'L','$', default_opts) --(, 'Alternative End Line')
 vim.api.nvim_set_keymap('n', 'Y','yg_', default_opts) --(, 'Alternative Copy to End of Line')
+vim.api.nvim_set_keymap('i', '<c-j>','<c-n>', default_opts) --(, 'Alternative Cycle through options')
+vim.api.nvim_set_keymap('i', '<c-k>','<c-p>', default_opts) --(, 'Alternative Cycle through options')
 
 -- Disable Highlights
 ----------------------------------------
@@ -55,4 +57,6 @@ vim.api.nvim_set_keymap('n', '<leader>\\', '<C-w>v', default_opts) --(, 'Window 
 vim.api.nvim_set_keymap('n', '<leader>-', '<C-w>s', default_opts) --(, 'Window Split Horizonatally')
 
 vim.api.nvim_set_keymap('n', '<leader>q', '<C-w>q', default_opts) --(, 'Window Close')
-vim.api.nvim_set_keymap('n', '<leader>qa', '<C-w>Q', default_opts) --(, 'Window Close')
+vim.api.nvim_set_keymap('n', '<leader>Q', '<C-w>qa!', default_opts) --(, 'Window Close')
+
+print('Keymaps connected')
