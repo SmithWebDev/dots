@@ -16,26 +16,40 @@ packer.init {
 }
 
 local plugins = {
-  -- Keybinds
-  'mapx',       -- https://github.com/b0o/mapx.nvim
-
   -- Completion
-  'coq',        -- https://github.com/ms-jpq/coq_nvim
-  'emmet',      -- https://github.com/mattn/emmet-vim
+  'coq',         -- https://github.com/ms-jpq/coq_nvim
+  'emmet',       -- https://github.com/mattn/emmet-vim
 
   -- Editing
-  'surround',   --https://github.com/tpope/vim-surround
-  'easy_align', --https://github.com/junegunn/vim-easy-align
+  'colorizer', -- https://github.com/norcalli/nvim-colorizer.lua
+  'easy_align',  -- https://github.com/junegunn/vim-easy-align
+  'surround',    -- https://github.com/tpope/vim-surround
+  --'speeddating', -- https://github.com/tpope/vim-speeddating
+  --'heroku', -- https://github.com/tpope/vim-heroku
 
-  -- LSP Navigator
-  'navigator',  -- https://github.com/ray-x/navigator.lua
+  -- Filetypes 
+  --'haml',      -- https://github.com/tpope/vim-haml
+  'rails',       -- https://github.com/tpope/vim-rails
 
   -- Fuzzy File Finder
-  -- 'fzy',     --https://github.com/mfussenegger/nvim-fzy
-  'telescope',  -- https://github.com/nvim-telescope/telescope.nvim
+  'fzy',         -- https://github.com/mfussenegger/nvim-fzy
+  'telescope',   -- https://github.com/nvim-telescope/telescope.nvim
+
+  -- Git
+  'lazygit', -- https://github.com/kdheepak/lazygit.nvim
+  
+
+  -- Keybinds
+  'mapx',        -- https://github.com/b0o/mapx.nvim
+
+  -- LSP Navigator
+  'navigator',   -- https://github.com/ray-x/navigator.lua
+
+  -- Testing
+  'ultest',      -- https://github.com/rcarriga/vim-ultest
 
   -- Treesitter/Syntax Highlighting
-  'treesitter', -- https://github.com/nvim-treesitter/nvim-treesitter
+  'treesitter',  -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)
