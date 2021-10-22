@@ -11,7 +11,7 @@ local o = vim.opt
 o.completeopt = 'menuone,noinsert,noselect'
 o.shortmess = 'csa' --Adjust short system messages
 -- o.updatetime = 2000
-o.timeoutlen=500
+o.timeoutlen=1500
 
 -- Fold Options --
 o.foldmethod = 'indent'
