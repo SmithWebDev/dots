@@ -43,6 +43,7 @@ local plugins = {
   'mapx',        -- https://github.com/b0o/mapx.nvim
 
   -- LSP Navigator
+--  'lsp',
   'navigator',   -- https://github.com/ray-x/navigator.lua
 
   -- Testing
