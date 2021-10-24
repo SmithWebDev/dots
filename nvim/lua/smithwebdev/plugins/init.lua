@@ -24,6 +24,7 @@ local plugins = {
   -- Editing
   'colorizer',     -- https://github.com/norcalli/nvim-colorizer.lua
   'easy_align',    -- https://github.com/junegunn/vim-easy-align
+  'marks', -- https://github.com/chentau/marks.nvim
   'surround',      -- https://github.com/tpope/vim-surround
   --'speeddating', -- https://github.com/tpope/vim-speeddating
   --'heroku',      -- https://github.com/tpope/vim-heroku
@@ -44,7 +45,7 @@ local plugins = {
   'mapx',          -- https://github.com/b0o/mapx.nvim
 
   -- LSP Navigator
-  'lsp',
+  --'lsp',
   'navigator',     -- https://github.com/ray-x/navigator.lua
 
   -- Testing

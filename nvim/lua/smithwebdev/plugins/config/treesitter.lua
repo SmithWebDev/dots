@@ -2,6 +2,7 @@ local M = {}
 
 M.plugin = {
   'nvim-treesitter/nvim-treesitter',
+  --'nvim-treesitter/playground', --https://github.com/nvim-treesitter/playground
 
   -- Run this command after the plugin (nvim-treesitter) is loaded
   run = ':TSUpdate',
@@ -19,7 +20,8 @@ M.plugin = {
         'css',
         'javascript',
         'go',
-        'query', },
+        'query', 
+      },
       highlight = {
         enable = true, -- false will disable the whole extension
       },
@@ -44,6 +46,9 @@ M.plugin = {
           show_help = '?',},
         }
       }
+
+    -- keybindings
+    --nnoremap('<leader><leader>tsp', ':TSPlaygroundToggle<CR>')
   end,
 }
 
