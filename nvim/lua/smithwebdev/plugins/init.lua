@@ -7,6 +7,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
+
 local packer = require'packer'
 
 -- Use your local data path and not plugin/
@@ -17,40 +18,41 @@ packer.init {
 
 local plugins = {
   -- Completion
-  'coq',         -- https://github.com/ms-jpq/coq_nvim
-  'emmet',       -- https://github.com/mattn/emmet-vim
+  'coq',           -- https://github.com/ms-jpq/coq_nvim
+  'emmet',         -- https://github.com/mattn/emmet-vim
 
   -- Editing
-  'colorizer', -- https://github.com/norcalli/nvim-colorizer.lua
-  'easy_align',  -- https://github.com/junegunn/vim-easy-align
-  'surround',    -- https://github.com/tpope/vim-surround
+  'colorizer',     -- https://github.com/norcalli/nvim-colorizer.lua
+  'easy_align',    -- https://github.com/junegunn/vim-easy-align
+  'surround',      -- https://github.com/tpope/vim-surround
   --'speeddating', -- https://github.com/tpope/vim-speeddating
-  --'heroku', -- https://github.com/tpope/vim-heroku
+  --'heroku',      -- https://github.com/tpope/vim-heroku
 
   -- Filetypes 
-  --'haml',      -- https://github.com/tpope/vim-haml
-  'rails',       -- https://github.com/tpope/vim-rails
+  --'haml',        -- https://github.com/tpope/vim-haml
+  'rails',         -- https://github.com/tpope/vim-rails
 
   -- Fuzzy File Finder
-  'fzy',         -- https://github.com/mfussenegger/nvim-fzy
-  'telescope',   -- https://github.com/nvim-telescope/telescope.nvim
+  'fzy',           -- https://github.com/mfussenegger/nvim-fzy
+  'telescope',     -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git
-  'lazygit', -- https://github.com/kdheepak/lazygit.nvim
+  'lazygit',       -- https://github.com/kdheepak/lazygit.nvim
   
 
   -- Keybinds
-  'mapx',        -- https://github.com/b0o/mapx.nvim
+  'mapx',          -- https://github.com/b0o/mapx.nvim
 
   -- LSP Navigator
---  'lsp',
-  'navigator',   -- https://github.com/ray-x/navigator.lua
+  'lsp',
+  'navigator',     -- https://github.com/ray-x/navigator.lua
 
   -- Testing
-  'ultest',      -- https://github.com/rcarriga/vim-ultest
+  'ultest',        -- https://github.com/rcarriga/vim-ultest
 
   -- Treesitter/Syntax Highlighting
-  'treesitter',  -- https://github.com/nvim-treesitter/nvim-treesitter
+  'playground',    --https://github.com/nvim-treesitter/playground
+  'treesitter',    -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)
@@ -60,3 +62,6 @@ packer.startup(function(use)
     use(require('smithwebdev.plugins.config.'..v).plugin)
   end
 end)
+
+--nvim_command(':PackerSync')
+print('Plugins connected...')
