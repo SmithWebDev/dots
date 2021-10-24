@@ -33,10 +33,10 @@ vim.api.nvim_set_keymap('n', '<right>', ':vertical resize -2<CR>', default_opts)
 
 -- Rotate Window Panes
 ----------------------------------------
---vim.api.nvim_set_keymap('n', '<C-S-h>', '<C-w>H', default_opts) --(, 'Navigate Left')
---vim.api.nvim_set_keymap('n', '<C-S-j>', '<C-w>J', default_opts) --(, 'Navigate Down')
---vim.api.nvim_set_keymap('n', '<C-S-k>', '<C-w>K', default_opts) --(, 'Navigate Up')
---vim.api.nvim_set_keymap('n', '<C-S-l>', '<C-w>L', default_opts) --(, 'Navigate Right')
+vim.api.nvim_set_keymap('n', '<leader>H', '<C-w>H', default_opts) --(, 'Navigate Left')
+vim.api.nvim_set_keymap('n', '<leader>J', '<C-w>J', default_opts) --(, 'Navigate Down')
+vim.api.nvim_set_keymap('n', '<leader>K', '<C-w>K', default_opts) --(, 'Navigate Up')
+vim.api.nvim_set_keymap('n', '<leader>L', '<C-w>L', default_opts) --(, 'Navigate Right')
 
 -- Tabs
 ----------------------------------------
