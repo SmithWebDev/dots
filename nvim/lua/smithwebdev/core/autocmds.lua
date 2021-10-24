@@ -36,7 +36,7 @@ auto(
         au!
         let blacklist = ['packer', 'netrw', 'TelescopePrompt', 'lspinfo', 'lsp-installer', 'query', 'tsplayground']
         au BufEnter * if &filetype == "" | setlocal ft=text | endif
-        au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 | silent w | endif
+        au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 && &modifiable| silent w | endif
     augroup END
   ]], false
   )
