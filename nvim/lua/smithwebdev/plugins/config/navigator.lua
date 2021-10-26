@@ -12,7 +12,6 @@ M.plugin = {
   requires = {
     'neovim/nvim-lspconfig',
     'williamboman/nvim-lsp-installer', -- https://github.com/williamboman/nvim-lsp-installer
-    'neovim/nvim-lspconfig',
     { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
   },
 
@@ -34,8 +33,15 @@ M.plugin = {
       end,
 
       lsp_installer = true,
+      default_mapping = false,
     })
 
+    --require('lspconfig').efm.setup({
+    --  init_options = {document_formatting = true},
+    --  settings = {
+    --    rootMarkers = {".git/"},
+    --      },
+    --  })
     --local lsp_installer = require('nvim-lsp-installer')
     --local lsp_installer_servers = require('nvim-lsp-installer.servers')
 
