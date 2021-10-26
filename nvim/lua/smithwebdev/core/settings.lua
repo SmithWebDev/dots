@@ -72,4 +72,8 @@ o.clipboard = 'unnamedplus'
 
 o.completefunc = 'emoji#complete'
 --command'set tags+ = gems.tags'
+vim.cmd [[colorscheme mirodark]]
+--vim.cmd [[colorscheme lighthaus]]
+--vim.cmd [[color lighthaus_dark]]
+--require(lua.smithwebdev.plugins.config.colorschemes).plugin()
 print('Settings connected')

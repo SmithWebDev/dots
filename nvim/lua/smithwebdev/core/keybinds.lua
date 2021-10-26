@@ -12,9 +12,9 @@ vim.g.mapleader = " "
 -- Alternative Standards
 ----------------------------------------
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>', default_opts) --(, 'Exit Insert Mode')
-vim.api.nvim_set_keymap('n', 'H','0', default_opts) --(, 'Alternative Begin Line')
+vim.api.nvim_set_keymap('n', 'H','^', default_opts) --(, 'Alternative Begin Line')
 vim.api.nvim_set_keymap('n', 'L','$', default_opts) --(, 'Alternative End Line')
-vim.api.nvim_set_keymap('n', 'Y','yg_', default_opts) --(, 'Alternative Copy to End of Line')
+vim.api.nvim_set_keymap('n', 'Y','y$', default_opts) --(, 'Alternative Copy to End of Line')
 vim.api.nvim_set_keymap('i', '<c-j>','<c-n>', default_opts) --(, 'Alternative Cycle through options')
 vim.api.nvim_set_keymap('i', '<c-k>','<c-p>', default_opts) --(, 'Alternative Cycle through options')
 vim.api.nvim_set_keymap('n', '<','<<', default_opts) --(, 'Alternative Cycle through options')
