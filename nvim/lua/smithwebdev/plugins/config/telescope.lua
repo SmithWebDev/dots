@@ -27,12 +27,14 @@ M.plugin = {
         use_less = false,
       },
 
-      --extensions = {
-      --  fzy_native = {
-      --    override_generic_sorter = false,
-      --    override_file_sorter = true,
-      --  },
-      --},
+      extensions = {
+        --fzy_native = {
+        --  override_generic_sorter = false,
+        --  override_file_sorter = true,
+        --},
+        dash = {
+        }
+      },
     })
 
     function _G.TelescopeFindConfigFiles()
