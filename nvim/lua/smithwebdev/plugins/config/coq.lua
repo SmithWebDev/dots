@@ -18,7 +18,7 @@ M.plugin = {
       auto_start = 'shut-up',
       keymap = {
         recommended = false,
-        jump_to_mark = '<leader>j',
+        jump_to_mark = 'jk',
       },
     }
   end,
