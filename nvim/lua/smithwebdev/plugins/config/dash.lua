@@ -9,6 +9,8 @@ M.plugin = {
 
   disable = not vim.fn.has('macunix'),
 
+  after = 'mapx.nvim',
+
   config = function()
     -- keybindings
     nnoremap('<leader>fd',':Dash<Space>') --, 'Open Dash Query'
