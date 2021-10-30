@@ -18,10 +18,11 @@ packer.init {
 
 local plugins = {
   -- Aesthetics
-  'colorschemes',
+  --'colorschemes',
 
   -- Completion
-  'coq',                 -- https://github.com/ms-jpq/coq_nvim
+  --'coq',                 -- https://github.com/ms-jpq/coq_nvim
+  'cmp', -- https://github.com/hrsh7th/nvim-cmp
   'emmet',               -- https://github.com/mattn/emmet-vim
   'tags',                -- https://github.com/ludovicchabant/vim-gutentags
 
@@ -46,7 +47,7 @@ local plugins = {
   -- Git
   'lazygit',             -- https://github.com/kdheepak/lazygit.nvim
 
-  -- Keybinds
+  ---- Keybinds
   'mapx',                -- https://github.com/b0o/mapx.nvim
   'whichkey',            --
 
@@ -55,9 +56,6 @@ local plugins = {
 
   -- Organization Utilities
   'orgmode',             -- https://github.com/kristijanhusak/orgmode.nvim
-
-  -- Startup
-  -- 'startify',         -- https://github.com/mhinz/vim-startify
 
   -- Testing
   'ultest',              -- https://github.com/rcarriga/vim-ultest
