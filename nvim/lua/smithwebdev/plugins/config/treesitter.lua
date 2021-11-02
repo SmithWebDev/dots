@@ -20,7 +20,7 @@ M.plugin = {
         'css',
         'javascript',
         'go',
-        'query', 
+        'query',
       },
       highlight = {
         enable = true, -- false will disable the whole extension
