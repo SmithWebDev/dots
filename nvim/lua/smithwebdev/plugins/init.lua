@@ -21,12 +21,13 @@ local plugins = {
   --'colorschemes',
 
   -- Completion
-  --'coq',                 -- https://github.com/ms-jpq/coq_nvim
-  'cmp', -- https://github.com/hrsh7th/nvim-cmp
+  --'coq',                 -- https://github.com/ms-jpq/coq_nvim  **
+  'cmp',               -- https://github.com/hrsh7th/nvim-cmp
   'emmet',               -- https://github.com/mattn/emmet-vim
-  'tags',                -- https://github.com/ludovicchabant/vim-gutentags
+  'tags',              -- https://github.com/ludovicchabant/vim-gutentags  **
 
   -- Editing
+  'autopairs', -- https://github.com/windwp/nvim-autopairs
   'colorizer',           -- https://github.com/norcalli/nvim-colorizer.lua
   'easy_align',          -- https://github.com/junegunn/vim-easy-align
   'marks',               -- https://github.com/chentau/marks.nvim
@@ -35,33 +36,36 @@ local plugins = {
   --'heroku',            -- https://github.com/tpope/vim-heroku
 
   -- Filetypes
-  'dash',                -- https://github.com/mrjones2014/dash.nvim
+  --'dash',                -- https://github.com/mrjones2014/dash.nvim  **
   --'haml',              -- https://github.com/tpope/vim-haml
-  'rails',               -- https://github.com/tpope/vim-rails
-  'seeing_is_believing', -- https://github.com/JoshCheek/seeing_is_believing
+  'rails',               -- https://github.com/tpope/vim-rails  **
+  --'seeing_is_believing', -- https://github.com/JoshCheek/seeing_is_believing
 
   -- Fuzzy / File Finder
-  'fzy',                 -- https://github.com/mfussenegger/nvim-fzy
-  'telescope',           -- https://github.com/nvim-telescope/telescope.nvim
+  'fzy',                 -- https://github.com/mfussenegger/nvim-fzy  **
+  'telescope',           -- https://github.com/nvim-telescope/telescope.nvim  **
 
   -- Git
-  'lazygit',             -- https://github.com/kdheepak/lazygit.nvim
+  'lazygit',             -- https://github.com/kdheepak/lazygit.nvim **
 
   ---- Keybinds
   'mapx',                -- https://github.com/b0o/mapx.nvim
-  'whichkey',            --
+  --'whichkey',          --
 
   -- LSP & Navigator
-  'navigator',           -- https://github.com/ray-x/navigator.lua
+  'navigator',           -- https://github.com/ray-x/navigator.lua  **
 
   -- Organization Utilities
   'orgmode',             -- https://github.com/kristijanhusak/orgmode.nvim
 
+  -- Snippets
+  'ultisnips', -- https://github.com/SirVer/ultisnips
+
   -- Testing
-  'ultest',              -- https://github.com/rcarriga/vim-ultest
+  'ultest',              -- https://github.com/rcarriga/vim-ultest  **
 
   -- Treesitter/Syntax Highlighting
-  'playground',          -- https://github.com/nvim-treesitter/playground
+  'playground',          -- https://github.com/nvim-treesitter/playground  **
   'treesitter',          -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 

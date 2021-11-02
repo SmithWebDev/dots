@@ -8,7 +8,7 @@ _G.Util = {}
 -------------------- HELPERS --------------------
 
 -- Universal attributes/utilities
-vim.g.python3_host_prog = vim.fn.exepath('python3')
+vim.g.python3_host_prog = fn.exepath('python3')
 
 
 
@@ -74,6 +74,10 @@ Util.trigger_completion = function()
   end -- flutter indents
 
   return Util.t "<CR>"
+end
+
+Util.t = function(cmd)
+  return api.nvim_replace_termcodes(cmd, true, true, true)
 end
 
 return Util

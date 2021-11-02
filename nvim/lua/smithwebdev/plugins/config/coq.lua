@@ -1,5 +1,13 @@
 local M = {}
 
+vim.g.coq_settings = {
+  auto_start = 'shut-up',
+  keymap = {
+    recommended = false,
+    jump_to_mark = 'jk',
+  },
+}
+
 M.plugin = {
   'ms-jpq/coq_nvim',
 
@@ -13,15 +21,8 @@ M.plugin = {
   after = 'mapx.nvim',
 
   -- Setup coq_nvim settings BEFORE the plugin (coq_nvim) is loaded
-  setup = function()
-    vim.g.coq_settings = {
-      auto_start = 'shut-up',
-      keymap = {
-        recommended = false,
-        jump_to_mark = 'jk',
-      },
-    }
-  end,
+  --setup = function()
+  --end,
 
   -- Setup coq_nvim settings AFTER the plugin (coq_nvim) is loaded
   config = function()
