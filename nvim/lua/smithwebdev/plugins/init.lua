@@ -20,6 +20,7 @@ local plugins = {
   -- Aesthetics
   'animate',               -- https://github.com/camspiers/animate.vim
   'colorschemes',
+  'indent_blankline', -- https://github.com/lukas-reineke/indent-blankline.nvim
   'vim_smoothie',          -- https://github.com/psliwka/vim-smoothie
 
   -- Completion
