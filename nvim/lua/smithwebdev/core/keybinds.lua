@@ -65,6 +65,6 @@ vim.api.nvim_set_keymap('n', '<leader>\\', '<C-w>v', default_opts) --(, 'Window 
 vim.api.nvim_set_keymap('n', '<leader>-', '<C-w>s', default_opts) --(, 'Window Split Horizonatally')
 
 vim.api.nvim_set_keymap('n', '<leader>q', '<C-w>q', default_opts) --(, 'Window Close')
-vim.api.nvim_set_keymap('n', '<leader>Q', '<C-w>qa!', default_opts) --(, 'Window Close')
+vim.api.nvim_set_keymap('n', '<leader>Q', '<cmd>qa!<CR>', default_opts) --(, 'Window Close')
 
 print('Keymaps connected')
