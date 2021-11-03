@@ -29,6 +29,7 @@ local plugins = {
   -- Editing
   'autopairs', -- https://github.com/windwp/nvim-autopairs
   'colorizer',           -- https://github.com/norcalli/nvim-colorizer.lua
+  'comment', -- https://github.com/numToStr/Comment.nvim
   'easy_align',          -- https://github.com/junegunn/vim-easy-align
   'marks',               -- https://github.com/chentau/marks.nvim
   'surround',            -- https://github.com/tpope/vim-surround
@@ -65,8 +66,8 @@ local plugins = {
   'ultest',              -- https://github.com/rcarriga/vim-ultest  **
 
   -- Treesitter/Syntax Highlighting
-  'playground',          -- https://github.com/nvim-treesitter/playground  **
-  'treesitter',          -- https://github.com/nvim-treesitter/nvim-treesitter
+  --'playground',          -- https://github.com/nvim-treesitter/playground  **
+  --'treesitter',          -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)
