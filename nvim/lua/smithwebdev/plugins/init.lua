@@ -51,7 +51,7 @@ local plugins = {
 
   ---- Keybinds
   'mapx',                -- https://github.com/b0o/mapx.nvim
-  --'whichkey',          --
+  'whichkey',          -- https://github.com/folke/which-key.nvim
 
   -- LSP & Navigator
   'navigator',           -- https://github.com/ray-x/navigator.lua  **
