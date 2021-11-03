@@ -5,7 +5,7 @@ M.plugin = {
 
   after = {
     'mapx.nvim',
-    'nvim-treesitter',
+    --'nvim-treesitter',
     },
 
   -- This plugin requires that the following plugins be loaded BEFORE navigator.lua
