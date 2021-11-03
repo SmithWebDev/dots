@@ -15,7 +15,7 @@ M.plugin = {
       -- one of "all", "maintained" (parsers with maintainers), or a list of languages
       ensure_installed = {
         'lua',
-        'ruby',
+        --'ruby',
         'html',
         'css',
         'javascript',

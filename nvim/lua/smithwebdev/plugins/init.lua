@@ -18,7 +18,7 @@ packer.init {
 
 local plugins = {
   -- Aesthetics
-  --'colorschemes',
+  'colorschemes',
 
   -- Completion
   --'coq',                 -- https://github.com/ms-jpq/coq_nvim  **
@@ -31,6 +31,7 @@ local plugins = {
   'colorizer',           -- https://github.com/norcalli/nvim-colorizer.lua
   'comment', -- https://github.com/numToStr/Comment.nvim
   'easy_align',          -- https://github.com/junegunn/vim-easy-align
+  --'lualine', -- https://github.com/hoob3rt/lualine.nvim
   'marks',               -- https://github.com/chentau/marks.nvim
   'surround',            -- https://github.com/tpope/vim-surround
   --'speeddating',       -- https://github.com/tpope/vim-speeddating
@@ -49,11 +50,12 @@ local plugins = {
   -- Git
   'lazygit',             -- https://github.com/kdheepak/lazygit.nvim **
 
-  ---- Keybinds
+  -- Keybinds
   'mapx',                -- https://github.com/b0o/mapx.nvim
   'whichkey',          -- https://github.com/folke/which-key.nvim
 
-  -- LSP & Navigator
+  -- LSP & File Navigation
+  'CHADtree', -- https://github.com/ms-jpq/chadtree
   'navigator',           -- https://github.com/ray-x/navigator.lua  **
 
   -- Organization Utilities
@@ -66,8 +68,8 @@ local plugins = {
   'ultest',              -- https://github.com/rcarriga/vim-ultest  **
 
   -- Treesitter/Syntax Highlighting
-  --'playground',          -- https://github.com/nvim-treesitter/playground  **
-  --'treesitter',          -- https://github.com/nvim-treesitter/nvim-treesitter
+  'playground',          -- https://github.com/nvim-treesitter/playground  **
+  'treesitter',          -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)

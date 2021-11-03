@@ -41,7 +41,6 @@ M.plugin = {
         sources = {
           {name = 'cmdline'}
         },
-
       })
 
     cmp.setup({
@@ -74,6 +73,20 @@ M.plugin = {
           behavior = cmp.ConfirmBehavior.Insert,
           select = true,
         },
+        ["jk"] = cmp.mapping(function(fallback)
+          if vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+            press("<ESC>:call UltiSnips#JumpForwards()<CR>")
+          elseif cmp.visible() then
+            cmp.mapping.confirm()
+          else
+            fallback()
+          end
+        end, {
+          "i",
+          "s",
+          -- add this line when using cmp-cmdline:
+          "c",
+        }),
         ["<C-j>"] = cmp.mapping(function(fallback)
           if vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
             press("<ESC>:call UltiSnips#JumpForwards()<CR>")
