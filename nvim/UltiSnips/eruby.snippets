@@ -1,0 +1,22 @@
+extends html
+
+snippet ltc
+<%= link_to "${1:Link text...}", ${2:model}_path(${3:@$2}), class: '${0:index}'  %>
+endsnippet
+
+snippet ltdc
+<%= link_to '${1:link text...}', ${2:model},  method: :destroy, data: {confirm: 'Are you sure?'}, class: '${0:index}' %>
+endsnippet
+
+snippet ltd
+<%= link_to '${1:link text...}', ${2:model},  method: :delete, data: {confirm: 'Are you sure?'} %>
+endsnippet
+
+
+snippet tstreamfrom "turbo steam from"
+<%= turbo_stream_from $1 %>
+endsnippet
+
+snippet tftag "turbo frame tag"
+<%= turbo_frame_tag $1 %>	
+endsnippet

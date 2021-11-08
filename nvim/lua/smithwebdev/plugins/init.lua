@@ -27,7 +27,7 @@ local plugins = {
   --'coq',                 -- https://github.com/ms-jpq/coq_nvim  **
   'cmp',                   -- https://github.com/hrsh7th/nvim-cmp
   'emmet',                 -- https://github.com/mattn/emmet-vim
-  'tags',                  -- https://github.com/ludovicchabant/vim-gutentags  **
+  --'tags',                  -- https://github.com/ludovicchabant/vim-gutentags  **
 
   -- Editing
   'autopairs',             -- https://github.com/windwp/nvim-autopairs

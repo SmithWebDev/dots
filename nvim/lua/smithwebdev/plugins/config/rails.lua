@@ -24,7 +24,7 @@ M.plugin = {
 
     nnoremap('<leader><leader>rD',           ':Destroy<Space>') --,       Rails Destroy Command
     nnoremap('<leader><leader>rg',           ':Generate<Space>') --,      Rails Generate Command
-    nnoremap('<leader><leader><leader><leader>r',    '!rails<Space>') --,         Rails CLI command
+    nnoremap('<leader><leader>rr',           '!rails<Space>') --,         Rails CLI command
 
     nnoremap('<leader><leader>rdbm',         '!rails db:migrate<CR>') --, Rails DB:Migrate Command
     nnoremap('<leader><leader>rdbs',         '!rails db:setup') --,       Rails DB:Setup Command
@@ -34,7 +34,7 @@ M.plugin = {
 
 
     -- Invoking :Rails with no arguments runs a default task.
-    nnoremap('<leader><leader>rR',           '<cmd>Rails<CR>')
+    nnoremap('<leader><leader>rR',           '<cmd>Rails<CR> | :set nowrap<CR>')
     -- File,                         Task ~
     -- test/*_test.rb,               test TEST=test/*_test.rb
     -- spec/*_spec.rb,               spec SPEC=spec/*_spec.rb
