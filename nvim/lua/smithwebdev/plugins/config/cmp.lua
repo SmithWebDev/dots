@@ -15,7 +15,8 @@ M.plugin = {
     'hrsh7th/cmp-path',                    -- https://github.com/hrsh7th/cmp-path
     'quangnguyen30192/cmp-nvim-ultisnips', -- https://github.com/quangnguyen30192/cmp-nvim-ultisnips
     'hrsh7th/cmp-cmdline',                 -- https://github.com/hrsh7th/cmp-cmdline
-    'honza/vim-snippets',
+    'honza/vim-snippets',                  -- https://github.com/honza/vim-snippets
+    'quangnguyen30192/cmp-nvim-tags',      -- https://github.com/quangnguyen30192/cmp-nvim-tags
   },
 
   config = function()
@@ -64,6 +65,7 @@ M.plugin = {
       sources = {
         { name = 'ultisnips'},
         { name = 'nvim_lsp'},
+        { name = 'tags'},
         { name = 'buffer'},
         { name = 'nvim_lua'},
         { name = 'look'},
@@ -146,9 +148,10 @@ M.plugin = {
           with_text   = false,
           maxwidth    = 50,
           menu        = ({
+            ultisnips = '[Snip]',
+            tags      = '[Tags]',
             nvim_lsp  = '[LSP]',
             nvim_lua  = '[Lua]',
-            ultisnips = '[Snip]',
             buffer    = '[Buffer]',
             path      = '[Path]'
             })
