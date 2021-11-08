@@ -45,7 +45,7 @@ M.plugin = {
       })
       cmp.setup.cmdline(
       '/', {
-      sources = {
+        sources = {
           {name = 'buffer'}
       }
       })
@@ -67,6 +67,7 @@ M.plugin = {
         { name = 'nvim_lsp'},
         { name = 'tags'},
         { name = 'buffer'},
+        { name = 'orgmode'},
         { name = 'nvim_lua'},
         { name = 'look'},
         { name = 'path'},
@@ -153,6 +154,7 @@ M.plugin = {
             nvim_lsp  = '[LSP]',
             nvim_lua  = '[Lua]',
             buffer    = '[Buffer]',
+            orgmode   = '[Orgmode]',
             path      = '[Path]'
             })
           })
