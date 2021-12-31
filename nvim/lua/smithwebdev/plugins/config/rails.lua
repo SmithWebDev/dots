@@ -15,20 +15,22 @@ M.plugin = {
 
   config = function()
     -- keybindings
-    nnoremap('<leader><leader>rba',          ':!bundle add<Space>') --,   Bundle Add Command
-    nnoremap('<leader><leader>rbi',          ':!bundle install<CR>') --,  Bundle Install Command
-    nnoremap('<leader><leader>rbu',          ':!bundle update<CR>') --,   Bundle Update Command
-    nnoremap('<leader><leader>rc',           '<cmd>Console!<CR>') --,     Open Rails Console New Tmux Window
-    nnoremap('<leader><leader>rs',           '<cmd>Server!<CR>') --,      Open Rails Server New Tmux Window
+    nnoremap('<leader><leader>rba',          ':!bundle add<Space>') --,         Bundle Add Command
+    nnoremap('<leader><leader>rbi',          ':!bundle install<CR>') --,        Bundle Install Command
+    nnoremap('<leader><leader>rbu',          ':!bundle update<CR>') --,         Bundle Update Command
+    nnoremap('<leader><leader>rc',           '<cmd>Console!<CR>') --,           Open Rails Console New Tmux Window
+    nnoremap('<leader><leader>rs',           '<cmd>Server!<CR>') --,            Open Rails Server New Tmux Window
 
 
-    nnoremap('<leader><leader>rD',           ':Destroy<Space>') --,       Rails Destroy Command
-    nnoremap('<leader><leader>rg',           ':Generate<Space>') --,      Rails Generate Command
-    nnoremap('<leader><leader>rr',           '!rails<Space>') --,         Rails CLI command
+    nnoremap('<leader><leader>rD',           ':Destroy<Space>') --,             Rails Destroy Command
+    nnoremap('<leader><leader>rg',           ':Generate<Space>') --,            Rails Generate Command
+    nnoremap('<leader><leader>rgc',          ':Generate controller<Space>') --, Rails Generate Command
+    nnoremap('<leader><leader>rgm',          ':Generate model<Space>') --,      Rails Generate Command
+    nnoremap('<leader><leader>rr',           '!rails<Space>') --,               Rails CLI command
 
-    nnoremap('<leader><leader>rdbm',         '!rails db:migrate<CR>') --, Rails DB:Migrate Command
-    nnoremap('<leader><leader>rdbs',         '!rails db:setup') --,       Rails DB:Setup Command
-    nnoremap('<leader><leader>rdbS',         '!rails db:seed') --,        Rails DB:Seed Command
+    nnoremap('<leader><leader>rdbm',         '!rails db:migrate') --,       Rails DB:Migrate Command
+    nnoremap('<leader><leader>rdbs',         '!rails db:setup') --,             Rails DB:Setup Command
+    nnoremap('<leader><leader>rdbS',         '!rails db:seed') --,              Rails DB:Seed Command
     --nnoremap('',                   '')
     --nnoremap('',                   '')
 

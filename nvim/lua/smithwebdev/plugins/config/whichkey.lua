@@ -6,8 +6,8 @@ M.plugin = {
   config = function()
     require('which-key').setup({
       plugins = {
-        marks = true,
-        registers = true,
+        marks = false,
+        registers = false,
         spelling = {
           enabled = true,
           suggestions = 20,

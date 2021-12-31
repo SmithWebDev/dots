@@ -1,3 +1,1 @@
-def Something
-  
-end
+

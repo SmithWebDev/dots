@@ -2,10 +2,9 @@ local M = {}
 
 M.plugin = {
   'mrjones2014/dash.nvim',
+  run = 'make install',
 
   requires = { 'nvim-telescope/telescope.nvim' },
-
-  run = 'make install',
 
   disable = not vim.fn.has('macunix'),
 

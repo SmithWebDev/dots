@@ -21,7 +21,7 @@ M.plugin = {
         'javascript',
         'go',
         'query',
-        'org'
+        --'org',
       },
       highlight = {
         enable = true, -- false will disable the whole extension

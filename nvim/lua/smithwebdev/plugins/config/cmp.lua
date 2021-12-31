@@ -13,15 +13,20 @@ M.plugin = {
     'rafamadriz/friendly-snippets',        -- https://github.com/rafamadriz/friendly-snippets
     'onsails/lspkind-nvim',                -- https://github.com/onsails/lspkind-nvim},
     'hrsh7th/cmp-path',                    -- https://github.com/hrsh7th/cmp-path
-    'quangnguyen30192/cmp-nvim-ultisnips', -- https://github.com/quangnguyen30192/cmp-nvim-ultisnips
     'hrsh7th/cmp-cmdline',                 -- https://github.com/hrsh7th/cmp-cmdline
     'honza/vim-snippets',                  -- https://github.com/honza/vim-snippets
     'quangnguyen30192/cmp-nvim-tags',      -- https://github.com/quangnguyen30192/cmp-nvim-tags
+    'quangnguyen30192/cmp-nvim-ultisnips', -- https://github.com/quangnguyen30192/cmp-nvim-ultisnips
+    'windwp/nvim-autopairs', -- https://github.com/windwp/nvim-autopairs
   },
 
   config = function()
     local cmp = require('cmp')
     local lspkind = require('lspkind')
+
+    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+    local cmp = require('cmp')
+    cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 
     local has_any_words_before = function()
       if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
@@ -63,20 +68,16 @@ M.plugin = {
       },
 
       sources = {
-        { name = 'ultisnips'},
         { name = 'nvim_lsp'},
-        { name = 'tags'},
-        { name = 'buffer'},
         { name = 'orgmode'},
         { name = 'nvim_lua'},
-        { name = 'look'},
-        { name = 'path'},
+        --{ name = 'look'},
       },
 
       mapping = {
         ["<CR>"]  = cmp.mapping.confirm(),
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(4),
         ["<C-e>"] = cmp.mapping.close(),
         ["<C-y>"] = cmp.mapping.confirm {
           behavior = cmp.ConfirmBehavior.Insert,
@@ -85,8 +86,8 @@ M.plugin = {
         ["jk"] = cmp.mapping(function(fallback)
           if cmp.get_selected_entry() == nil and vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
             press("<C-R>=UltiSnips#ExpandSnippet()<CR>")
-          elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-            press("<ESC>:call UltiSnips#JumpForwards()<CR>")
+          elseif cmp.get_selected_entry() == 1 then
+            cmp.mapping.confirm()
           else
             fallback()
           end
@@ -141,6 +142,66 @@ M.plugin = {
           -- add this line when using cmp-cmdline:
           "c",
         }),
+        ["<C-p>"] = cmp.mapping(function ()
+          if has_any_words_before() then
+            cmp.setup.buffer {
+              sources = {
+                {name = 'path'}
+                }
+              }
+            cmp.complete()
+          end
+        end, {
+          "i",
+          "s",
+          -- add this line when using cmp-cmdline:
+          "c",
+        }),
+        ["<C-t>"] = cmp.mapping(function ()
+          if has_any_words_before() then
+            cmp.setup.buffer {
+              sources = {
+                {name = 'tags'}
+                }
+              }
+            cmp.complete()
+          end
+        end, {
+          "i",
+          "s",
+          -- add this line when using cmp-cmdline:
+          "c",
+        }),
+        ["<C-s>"] = cmp.mapping(function ()
+          if has_any_words_before() then
+            cmp.setup.buffer {
+              sources = {
+                {name = 'ultisnips'}
+                }
+              }
+            cmp.complete()
+          end
+        end, {
+          "i",
+          "s",
+          -- add this line when using cmp-cmdline:
+          "c",
+        }),
+        ["<C-b>"] = cmp.mapping(function ()
+          if has_any_words_before() then
+            cmp.setup.buffer {
+              sources = {
+                {name = 'buffer'}
+                }
+              }
+            cmp.complete()
+          end
+        end, {
+          "i",
+          "s",
+          -- add this line when using cmp-cmdline:
+          "c",
+        })
       },
       completion = {},
 

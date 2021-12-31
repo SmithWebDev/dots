@@ -12,13 +12,18 @@ vim.g.UltiSnipsListSnippets                = "<c-tab>"
 M.plugin = {
   'SirVer/ultisnips',
 
+  after = 'mapx.nvim',
+
   requires = {
     'honza/vim-snippets',
     },
 
+  config = function()
+    --keybinds
+    nnoremap('<leader><leader>s', ':UltiSnipsEdit<CR>')
+  end
 
-  --keybinds
-  
+
 }
 
 return M

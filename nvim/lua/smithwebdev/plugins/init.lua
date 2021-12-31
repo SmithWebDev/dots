@@ -30,7 +30,6 @@ local plugins = {
   --'tags',                  -- https://github.com/ludovicchabant/vim-gutentags  **
 
   -- Editing
-  'autopairs',             -- https://github.com/windwp/nvim-autopairs
   'colorizer',             -- https://github.com/norcalli/nvim-colorizer.lua
   'comment',               -- https://github.com/numToStr/Comment.nvim
   'easy_align',            -- https://github.com/junegunn/vim-easy-align
@@ -44,6 +43,7 @@ local plugins = {
   -- Filetypes
   --'dash',                -- https://github.com/mrjones2014/dash.nvim  **
   --'haml',                -- https://github.com/tpope/vim-haml
+  'markdown_preview', -- https://github.com/iamcco/markdown-preview.nvim
   'rails',                 -- https://github.com/tpope/vim-rails  **
   --'seeing_is_believing', -- https://github.com/JoshCheek/seeing_is_believing
 
@@ -62,8 +62,8 @@ local plugins = {
   'CHADtree',              -- https://github.com/ms-jpq/chadtree
   'navigator',             -- https://github.com/ray-x/navigator.lua  **
 
-  -- Organization Utilities
-  'orgmode',               -- https://github.com/kristijanhusak/orgmode.nvim
+  ---- Organization Utilities
+  ----'orgmode',               -- https://github.com/kristijanhusak/orgmode.nvim
 
   -- Snippets
   'ultisnips',             -- https://github.com/SirVer/ultisnips
@@ -71,9 +71,9 @@ local plugins = {
   -- Testing
   'ultest',                -- https://github.com/rcarriga/vim-ultest  **
 
-  -- Treesitter/Syntax Highlighting
-  'playground',            -- https://github.com/nvim-treesitter/playground  **
-  'treesitter',            -- https://github.com/nvim-treesitter/nvim-treesitter
+  ---- Treesitter/Syntax Highlighting
+  --'playground',            -- https://github.com/nvim-treesitter/playground  **
+  --'treesitter',            -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)

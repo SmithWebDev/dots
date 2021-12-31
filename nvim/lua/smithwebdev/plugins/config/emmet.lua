@@ -10,13 +10,13 @@ vim.g.user_emmet_settings = {
     ['javascript.jsx'] = {
       {extends = 'jsx'}
         },
-    erb = {
-      {extends = 'html'}
-      },
+    -- ['erb'] = {
+    --   {extends = 'html'}
+    --   },
     }
   }
 
-vim.g.user_emmet_mode = 'nv'
+vim.g.user_emmet_mode = 'inv'
 
 M.plugin = {
   'mattn/emmet-vim',

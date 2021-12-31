@@ -12,11 +12,24 @@ snippet ltd
 <%= link_to '${1:link text...}', ${2:model},  method: :delete, data: {confirm: 'Are you sure?'} %>
 endsnippet
 
-
-snippet tstreamfrom "turbo steam from"
-<%= turbo_stream_from $1 %>
+# Turbo Frame Snippets
+snippet tfsrc "Set turbo frame information"
+<turbo-frame id="$1" ${2:src="$3"}>
+	$4
+</turbo-frame>
 endsnippet
 
 snippet tftag "turbo frame tag"
 <%= turbo_frame_tag $1 %>	
 endsnippet
+
+
+# Turbo Stream Snippets
+
+snippet tsapp "Turbo Stream append action"
+	
+
+snippet tsfrom "turbo steam from"
+<%= turbo_stream_from $1 %>
+endsnippet
+
