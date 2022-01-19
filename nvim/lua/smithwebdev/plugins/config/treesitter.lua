@@ -2,6 +2,7 @@ local M = {}
 
 M.plugin = {
   'nvim-treesitter/nvim-treesitter',
+  'nvim-treesitter/nvim-treesitter-refactor',
   --'nvim-treesitter/playground', --https://github.com/nvim-treesitter/playground
 
   -- Run this command after the plugin (nvim-treesitter) is loaded
@@ -13,6 +14,26 @@ M.plugin = {
   config = function()
     require'nvim-treesitter.configs'.setup {
       -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+      refactor = {
+        highlight_definitions = { enable = true },
+        highlight_current_scope = { enable = true },
+        smart_rename = {
+          enable = true, 
+          keymaps = {
+            smart_rename = "grr",
+            },
+          },
+        },
+        navigation = {
+          enable = true,
+          keymaps = {
+            gotodefinition = "gnd",
+            list_definitions = "gnD",
+            list_definitions_toc = "g0",
+            goto_next_usage = "gnu",
+            goto_previous_usage = "gpu",
+          }
+        },
       ensure_installed = {
         'lua',
         --'ruby',

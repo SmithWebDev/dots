@@ -5,7 +5,7 @@ M.plugin = {
 
   after = {
     'mapx.nvim',
-    --'nvim-treesitter',
+    'nvim-treesitter',
     },
 
   -- This plugin requires that the following plugins be loaded BEFORE navigator.lua
@@ -33,6 +33,14 @@ M.plugin = {
 
 ---@diagnostic disable-next-line: redundant-value
     require('lsp_signature').setup()
+
+    require('nvim-autopairs').setup({
+      disable_filetype = {"TelescopePrompt", "guihua", "guihua_rust", "clap_input"},
+
+--      if vim.o.ft == "clap_input" and vim.o.ft == "guihua" and vim.o.ft == "guihua_rust" then
+--        require'cmp'.setup.buffer {completion = {enable = false} }
+--      end
+    })
 
     require('navigator').setup({
       on_attach = function(client)
@@ -84,9 +92,9 @@ M.plugin = {
         {key  = '<leader>lw',     func = 'print(vim.inspect(vim.lsp.buf.list_workspace_folders()))'},
         --{key  = "<M-k>",        mode = "i", func = "signature_help()"},
       },
-      html = {
-        filetype = {'erb'}
-          }
+      --html = {
+      --  filetype = {'erb'}
+      --    }
     })
 
     --require('lspconfig').efm.setup({

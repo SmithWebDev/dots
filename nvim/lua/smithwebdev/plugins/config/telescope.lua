@@ -7,6 +7,7 @@ M.plugin = {
   requires = {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope-media-files.nvim',
+    'nvim-telescope/telescope-file-browser.nvim',
     'nvim-telescope/telescope-frecency.nvim',
     'nvim-telescope/telescope-fzy-native.nvim',
     'fhill2/telescope-ultisnips.nvim'
@@ -30,6 +31,12 @@ M.plugin = {
       },
 
       extensions = {
+        file_browser = {
+          mappings = {
+            ['i'] = {},
+            ['n'] = {},
+          },
+        },
         --fzy_native = {
         --  override_generic_sorter = false,
         --  override_file_sorter = true,
@@ -40,6 +47,7 @@ M.plugin = {
     })
 
     telescope.load_extension('ultisnips')
+    telescope.load_extension('file_browser')
 
     function _G.TelescopeFindConfigFiles()
       local configdir = vim.fn.stdpath('config')
@@ -81,7 +89,7 @@ M.plugin = {
 
     nnoremap('<leader>fc', [[<Cmd>lua TelescopeFindConfigFiles()<CR>]])
     nnoremap('<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]])
-    --nnoremap('<leader>fb', [[<Cmd>lua TelescopeFindFiles()<CR>]])
+    nnoremap('<leader>fb', ':Telescope file_browser')
     --nnoremap('<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]])
     nnoremap('<leader>fl', [[<Cmd>lua TelescopeLiveGrep()<CR>]])
     nnoremap('<leader>fm', [[<Cmd>lua TelescopeKeyMap()<CR>]])

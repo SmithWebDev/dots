@@ -17,9 +17,10 @@ M.plugin = {
     'honza/vim-snippets',                  -- https://github.com/honza/vim-snippets
     'quangnguyen30192/cmp-nvim-tags',      -- https://github.com/quangnguyen30192/cmp-nvim-tags
     'quangnguyen30192/cmp-nvim-ultisnips', -- https://github.com/quangnguyen30192/cmp-nvim-ultisnips
-    'windwp/nvim-autopairs', -- https://github.com/windwp/nvim-autopairs
+    'windwp/nvim-autopairs',               -- https://github.com/windwp/nvim-autopairs
+    'ray-x/cmp-treesitter',                -- https://github.com/ray-x/cmp-treesitter  
   },
-
+ 
   config = function()
     local cmp = require('cmp')
     local lspkind = require('lspkind')
@@ -48,15 +49,13 @@ M.plugin = {
           {name = 'cmdline'}
         },
       })
-      cmp.setup.cmdline(
-      '/', {
-        sources = {
-          {name = 'buffer'}
-      }
-      })
-
+    cmp.setup.cmdline(
+    '/', {
+      sources = {
+        {name = 'buffer'}
+    }
+    })
     cmp.setup({
-
       snippet = {
         expand = function(args)
           if vim.fn.exists('*vsnip#anonymous') == 1 then
@@ -71,6 +70,7 @@ M.plugin = {
         { name = 'nvim_lsp'},
         { name = 'orgmode'},
         { name = 'nvim_lua'},
+        { name = 'treesitter'},
         --{ name = 'look'},
       },
 

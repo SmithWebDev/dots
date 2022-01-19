@@ -33,6 +33,7 @@ local plugins = {
   'colorizer',             -- https://github.com/norcalli/nvim-colorizer.lua
   'comment',               -- https://github.com/numToStr/Comment.nvim
   'easy_align',            -- https://github.com/junegunn/vim-easy-align
+  'folds', -- https://github.com/anuvyklack/pretty-fold.nvim
   'hlslens',               -- https://github.com/kevinhwang91/nvim-hlslens
   --'lualine',             -- https://github.com/hoob3rt/lualine.nvim
   'marks',                 -- https://github.com/chentau/marks.nvim
@@ -45,7 +46,7 @@ local plugins = {
   --'haml',                -- https://github.com/tpope/vim-haml
   'markdown_preview', -- https://github.com/iamcco/markdown-preview.nvim
   'rails',                 -- https://github.com/tpope/vim-rails  **
-  --'seeing_is_believing', -- https://github.com/JoshCheek/seeing_is_believing
+  'seeing_is_believing', -- https://github.com/JoshCheek/seeing_is_believing
 
   -- Fuzzy / File Finder
   'fzy',                   -- https://github.com/mfussenegger/nvim-fzy  **
@@ -73,7 +74,7 @@ local plugins = {
 
   ---- Treesitter/Syntax Highlighting
   --'playground',            -- https://github.com/nvim-treesitter/playground  **
-  --'treesitter',            -- https://github.com/nvim-treesitter/nvim-treesitter
+  'treesitter',            -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)
