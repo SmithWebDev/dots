@@ -26,11 +26,11 @@ M.plugin = {
     nnoremap('<leader><leader>rg',           ':Generate<Space>') --,            Rails Generate Command
     nnoremap('<leader><leader>rgc',          ':Generate controller<Space>') --, Rails Generate Command
     nnoremap('<leader><leader>rgm',          ':Generate model<Space>') --,      Rails Generate Command
-    nnoremap('<leader><leader>rr',           '!rails<Space>') --,               Rails CLI command
+    nnoremap('<leader><leader>rr',           ':!rails<Space>') --,               Rails CLI command
 
-    nnoremap('<leader><leader>rdbm',         '!rails db:migrate') --,       Rails DB:Migrate Command
-    nnoremap('<leader><leader>rdbs',         '!rails db:setup') --,             Rails DB:Setup Command
-    nnoremap('<leader><leader>rdbS',         '!rails db:seed') --,              Rails DB:Seed Command
+    nnoremap('<leader><leader>rdbm',         ':!rails db:migrate') --,       Rails DB:Migrate Command
+    nnoremap('<leader><leader>rdbs',         ':!rails db:setup') --,             Rails DB:Setup Command
+    nnoremap('<leader><leader>rdbS',         ':!rails db:seed') --,              Rails DB:Seed Command
     --nnoremap('',                   '')
     --nnoremap('',                   '')
 
