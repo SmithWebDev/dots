@@ -5,10 +5,10 @@ M.plugin = {
 
   -- Setup mapx.nvim settings AFTER the plugin (mapx.nvim) is loaded
   config = function()
-    require'mapx'.setup {
-      global = true,
-      whichkey = false,
-    }
+    require'mapx'.setup ({
+      global = 'force',
+      whichkey = false
+    })
   end
 }
 

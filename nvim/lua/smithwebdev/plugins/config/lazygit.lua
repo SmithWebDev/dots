@@ -7,7 +7,6 @@ M.plugin = {
 
   config = function()
     -- keybindings
-    
     nnoremap('<leader>gl', '<cmd>LazyGit<CR>')
   end
 }

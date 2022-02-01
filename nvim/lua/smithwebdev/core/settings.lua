@@ -8,7 +8,7 @@ local o = vim.opt
 -- vim.cmd 'syntax on'
 
 -- Completion Options --
-o.completeopt = 'menuone,noinsert,noselect'
+o.completeopt = 'menu,menuone,noinsert,noselect'
 o.shortmess = 'csa' --Adjust short system messages
 -- o.updatetime = 2000
 o.timeoutlen=1500
@@ -72,4 +72,8 @@ o.clipboard = 'unnamedplus'
 
 o.completefunc = 'emoji#complete'
 --command'set tags+ = gems.tags'
+--vim.cmd [[colorscheme mirodark]]
+--vim.cmd [[colorscheme lighthaus]]
+--vim.cmd [[color lighthaus_dark]]
+--require(lua.smithwebdev.plugins.config.colorschemes).plugin()
 print('Settings connected')
