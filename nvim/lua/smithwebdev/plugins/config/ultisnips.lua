@@ -19,6 +19,7 @@ M.plugin = {
     },
 
   config = function()
+
     --keybinds
     nnoremap('<leader><leader>s', ':UltiSnipsEdit<CR>')
   end

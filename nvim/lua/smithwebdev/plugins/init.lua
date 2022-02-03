@@ -20,8 +20,9 @@ local plugins = {
   -- Aesthetics
   'animate',             -- https://github.com/camspiers/animate.vim
   'colorschemes',
-  'shade',               -- https://github.com/sunjon/shade.nvim
   'indent_blankline',    -- https://github.com/lukas-reineke/indent-blankline.nvim
+  'shade',               -- https://github.com/sunjon/shade.nvim
+  'statusline',          -- https://github.com/beauwilliams/statusline.lua
   'vim_smoothie',        -- https://github.com/psliwka/vim-smoothie
 
   -- Completion
@@ -48,35 +49,38 @@ local plugins = {
   'markdown_preview',    -- https://github.com/iamcco/markdown-preview.nvim
   'rails',               -- https://github.com/tpope/vim-rails  **
   'seeing_is_believing', -- https://github.com/JoshCheek/seeing_is_believing
+  'sniprun', --  https://github.com/michaelb/sniprun
 
   -- Fuzzy / File Finder
-  'fzy',                   -- https://github.com/mfussenegger/nvim-fzy  **
-  'telescope',             -- https://github.com/nvim-telescope/telescope.nvim  **
+  'fzy',                 -- https://github.com/mfussenegger/nvim-fzy  **
+  'telescope',           -- https://github.com/nvim-telescope/telescope.nvim  **
 
   -- Git
-  'lazygit',               -- https://github.com/kdheepak/lazygit.nvim **
+  'lazygit',             -- https://github.com/kdheepak/lazygit.nvim **
 
   -- Keybinds
-  'mapx',                  -- https://github.com/b0o/mapx.nvim
-  'whichkey',              -- https://github.com/folke/which-key.nvim
+  'mapx',                -- https://github.com/b0o/mapx.nvim
+  'whichkey',            -- https://github.com/folke/which-key.nvim
 
   -- LSP & File Navigation
-  'CHADtree',              -- https://github.com/ms-jpq/chadtree
-  'harpoon', -- https://github.com/ThePrimeagen/harpoon
-  'navigator',             -- https://github.com/ray-x/navigator.lua  **
+  'CHADtree',            -- https://github.com/ms-jpq/chadtree
+  'harpoon',             -- https://github.com/ThePrimeagen/harpoon
+  'navigator',           -- https://github.com/ray-x/navigator.lua  **
 
   -- Organization Utilities
   ----'orgmode',               -- https://github.com/kristijanhusak/orgmode.nvim
 
   -- Snippets
-  'ultisnips',             -- https://github.com/SirVer/ultisnips
+  'ultisnips',           -- https://github.com/SirVer/ultisnips
 
+  -- Terminal Emulator
+  'terminal', -- https://github.com/jlesquembre/nterm.nvim
   -- Testing
-  'ultest',                -- https://github.com/rcarriga/vim-ultest  **
+  'ultest',              -- https://github.com/rcarriga/vim-ultest  **
 
   -- Treesitter/Syntax Highlighting
   --'playground',            -- https://github.com/nvim-treesitter/playground  **
-  'treesitter',            -- https://github.com/nvim-treesitter/nvim-treesitter
+  'treesitter',          -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)

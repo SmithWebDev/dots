@@ -16,8 +16,8 @@ M.plugin = {
   config = function()
     -- keybindings
     nnoremap('<leader><leader>rba',          ':!bundle add<Space>') --,         Bundle Add Command
-    nnoremap('<leader><leader>rbi',          ':!bundle install<CR>') --,        Bundle Install Command
-    nnoremap('<leader><leader>rbu',          ':!bundle update<CR>') --,         Bundle Update Command
+    --nnoremap('<leader><leader>rbi',          ':!bundle install<CR>') --,        Bundle Install Command
+    --nnoremap('<leader><leader>rbu',          ':!bundle update<CR>') --,         Bundle Update Command
     nnoremap('<leader><leader>rc',           '<cmd>Console!<CR>') --,           Open Rails Console New Tmux Window
     nnoremap('<leader><leader>rs',           '<cmd>Server!<CR>') --,            Open Rails Server New Tmux Window
 

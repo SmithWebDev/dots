@@ -10,7 +10,7 @@ M.plugin = {
       keys = {
         brightness_up = '<C-Up>',
         brightness_down = '<C-Down>',
-        toggle = '<leader><leader>S>'
+        --toggle = '<leader><leader>S>'
       }
     })
   end
