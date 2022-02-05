@@ -39,6 +39,7 @@ local plugins = {
   'hlslens',             -- https://github.com/kevinhwang91/nvim-hlslens
   --'lualine',             -- https://github.com/hoob3rt/lualine.nvim
   'marks',               -- https://github.com/chentau/marks.nvim
+  'peekabo', -- https://github.com/junegunn/vim-peekaboo
   'surround',            -- https://github.com/tpope/vim-surround
   --'speeddating',         -- https://github.com/tpope/vim-speeddating
   --'heroku',              -- https://github.com/tpope/vim-heroku
