@@ -93,5 +93,4 @@ packer.startup(function(use)
   end
 end)
 
---test
 print('Plugins connected...')
