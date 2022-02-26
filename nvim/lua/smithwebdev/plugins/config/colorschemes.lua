@@ -10,6 +10,8 @@ M.plugin = {
   'folke/tokyonight.nvim', -- https://github.com/folke/tokyonight.nvim
   'shaunsingh/moonlight.nvim', --  https://github.com/shaunsingh/moonlight.nvim
   'vim-scripts/ScrollColors', -- https://github.com/vim-scripts/ScrollColors
+  'yonlu/omni.vim', -- https://github.com/yonlu/omni.vim
+  'ldelossa/vimdark', -- https://github.com/ldelossa/vimarkd
 
   requires = {
     'tjdevries/colorbuddy.nvim', -- https://github.com/tjdevries/colorbuddy.nvim

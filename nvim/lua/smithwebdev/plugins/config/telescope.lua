@@ -88,6 +88,10 @@ M.plugin = {
       })
     end
 
+    function _G.TelescopeTags()
+      telescope_builtin.tags({})
+    end
+
     nnoremap('<leader>fb', ':Telescope file_browser')
     nnoremap('<leader>fc', [[<Cmd>lua TelescopeFindConfigFiles()<CR>]])
     nnoremap('<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]])
@@ -95,6 +99,7 @@ M.plugin = {
     nnoremap('<leader>fl', [[<Cmd>lua TelescopeLiveGrep()<CR>]])
     nnoremap('<leader>fm', [[<Cmd>lua TelescopeKeyMap()<CR>]])
     nnoremap('<leader>fq', [[<Cmd>lua TelescopeQuickFix()<CR>]])
+    nnoremap('<leader>ft', [[<Cmd>lua TelescopeTags()<CR>]])
   end,
 }
 

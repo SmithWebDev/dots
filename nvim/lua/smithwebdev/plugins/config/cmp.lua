@@ -3,7 +3,7 @@ local M = {}
 M.plugin = {
   'hrsh7th/nvim-cmp',
 
-  after = 'vim-endwise',
+  --after = 'vim-endwise',
 
   requires = {
     'hrsh7th/cmp-nvim-lsp',                -- https://github.com/hrsh7th/cmp-nvim-lsp
@@ -79,6 +79,12 @@ M.plugin = {
         ["<C-u>"] = cmp.mapping.scroll_docs(-4),
         ["<C-d>"] = cmp.mapping.scroll_docs(4),
         ["<C-e>"] = cmp.mapping.close(),
+        ["<C-j>"] = cmp.mapping.select_next_item{ 
+          behavior = cmp.SelectBehavior.Select 
+        },
+        ["<C-k>"] = cmp.mapping.select_prev_item{ 
+          behavior = cmp.SelectBehavior.Select 
+        },
         ["<C-y>"] = cmp.mapping.confirm {
           behavior = cmp.ConfirmBehavior.Insert,
           select = true,
@@ -97,34 +103,34 @@ M.plugin = {
           -- add this line when using cmp-cmdline:
            "c",
         }),
-        ["<C-j>"] = cmp.mapping(function(fallback)
-          if vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-            press("<ESC>:call UltiSnips#JumpForwards()<CR>")
-          elseif cmp.visible() then
-            cmp.select_next_item()
-          else
-            fallback()
-          end
-        end, {
-          "i",
-          "s",
-          -- add this line when using cmp-cmdline:
-          "c",
-        }),
-        ["<C-k>"] = cmp.mapping(function(fallback)
-          if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-            press("<ESC>:call UltiSnips#JumpBackwards()<CR>")
-          elseif cmp.visible() then
-            cmp.select_prev_item()
-          else
-            fallback()
-          end
-        end, {
-          "i",
-          "s",
-          -- add this line when using cmp-cmdline:
-          "c",
-        }),
+        --["<C-j>"] = cmp.mapping(function(fallback)
+        --  if vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+        --    press("<ESC>:call UltiSnips#JumpForwards()<CR>")
+        --  elseif cmp.visible() then
+        --    cmp.select_next_item()
+        --  else
+        --    fallback()
+        --  end
+        --end, {
+        --  "i",
+        --  "s",
+        --  -- add this line when using cmp-cmdline:
+        --  "c",
+        --}),
+        --["<C-k>"] = cmp.mapping(function(fallback)
+        --  if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+        --    press("<ESC>:call UltiSnips#JumpBackwards()<CR>")
+        --  elseif cmp.visible() then
+        --    cmp.select_prev_item()
+        --  else
+        --    fallback()
+        --  end
+        --end, {
+        --  "i",
+        --  "s",
+        --  -- add this line when using cmp-cmdline:
+        --  "c",
+        --}),
         ["<C-Space>"] = cmp.mapping(function()
           if vim.fn.complete_info().selected == -1 then
             if cmp.visible() then

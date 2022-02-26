@@ -34,6 +34,7 @@ local plugins = {
   -- Editing
   'colorizer',           -- https://github.com/norcalli/nvim-colorizer.lua
   'comment',             -- https://github.com/numToStr/Comment.nvim
+  'cursorline', -- https://github.com/yamatsum/nvim-cursorline
   'easy_align',          -- https://github.com/junegunn/vim-easy-align
   'folds',               -- https://github.com/anuvyklack/pretty-fold.nvim
   'hlslens',             -- https://github.com/kevinhwang91/nvim-hlslens
@@ -64,6 +65,7 @@ local plugins = {
   'whichkey',            -- https://github.com/folke/which-key.nvim
 
   -- LSP & File Navigation
+  --'aerial', -- https://github.com/stevearc/aerial.nvim
   'CHADtree',            -- https://github.com/ms-jpq/chadtree
   'harpoon',             -- https://github.com/ThePrimeagen/harpoon
   'navigator',           -- https://github.com/ray-x/navigator.lua  **
