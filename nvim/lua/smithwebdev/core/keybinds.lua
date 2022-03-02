@@ -29,17 +29,17 @@ vim.api.nvim_set_keymap("n", "<leader><CR>", "<cmd>noh<CR>", default_opts) --(, 
 
 -- Resize Window Panes
 ----------------------------------------
--- vim.api.nvim_set_keymap('n', '<up>', ':resize +2<CR>', default_opts) --(,             'Resize Window Up)
--- vim.api.nvim_set_keymap('n', '<down>', ':resize -2<CR>', default_opts) --(,           'Resize Window Down)
--- vim.api.nvim_set_keymap('n', '<left>', ':vertical resize +2<CR>', default_opts) --(,  'Resize Window Left)
--- vim.api.nvim_set_keymap('n', '<right>', ':vertical resize -2<CR>', default_opts) --(, 'Resize Window Right)
+vim.api.nvim_set_keymap('n', '<up>', ':resize +2<CR>', default_opts) --(,             'Resize Window Up)
+vim.api.nvim_set_keymap('n', '<down>', ':resize -2<CR>', default_opts) --(,           'Resize Window Down)
+vim.api.nvim_set_keymap('n', '<left>', ':vertical resize +2<CR>', default_opts) --(,  'Resize Window Left)
+vim.api.nvim_set_keymap('n', '<right>', ':vertical resize -2<CR>', default_opts) --(, 'Resize Window Right)
 
 -- Rotate Window Panes
 ----------------------------------------
-vim.api.nvim_set_keymap('n', '<leader>H', '<C-w>H', default_opts) --(,                'Navigate Left')
-vim.api.nvim_set_keymap('n', '<leader>J', '<C-w>J', default_opts) --(,                'Navigate Down')
-vim.api.nvim_set_keymap('n', '<leader>K', '<C-w>K', default_opts) --(,                'Navigate Up')
-vim.api.nvim_set_keymap('n', '<leader>L', '<C-w>L', default_opts) --(,                'Navigate Right')
+vim.api.nvim_set_keymap('n', '<leader>H', '<C-w>H', default_opts) --(,                'Move Pane Left')
+vim.api.nvim_set_keymap('n', '<leader>J', '<C-w>J', default_opts) --(,                'Move Pane Down')
+vim.api.nvim_set_keymap('n', '<leader>K', '<C-w>K', default_opts) --(,                'Move Pane Up')
+vim.api.nvim_set_keymap('n', '<leader>L', '<C-w>L', default_opts) --(,                'Move Pane Right')
 
 -- Tabs
 ----------------------------------------
