@@ -10,7 +10,8 @@ M.plugin = {
     'nvim-telescope/telescope-file-browser.nvim',
     'nvim-telescope/telescope-frecency.nvim',
     'nvim-telescope/telescope-fzy-native.nvim',
-    'fhill2/telescope-ultisnips.nvim'
+    'fhill2/telescope-ultisnips.nvim',
+    'ThePrimeagen/harpoon'
     },
 
   -- Make sure this plugin (telescope.nvim) is loaded AFTER mapx is loaded
@@ -87,13 +88,18 @@ M.plugin = {
       })
     end
 
+    function _G.TelescopeTags()
+      telescope_builtin.tags({})
+    end
+
+    nnoremap('<leader>fb', ':Telescope file_browser')
     nnoremap('<leader>fc', [[<Cmd>lua TelescopeFindConfigFiles()<CR>]])
     nnoremap('<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]])
-    nnoremap('<leader>fb', ':Telescope file_browser')
-    --nnoremap('<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]])
+    nnoremap('<leader>fh', [[<Cmd>Telescope help_tags<CR>]])
     nnoremap('<leader>fl', [[<Cmd>lua TelescopeLiveGrep()<CR>]])
     nnoremap('<leader>fm', [[<Cmd>lua TelescopeKeyMap()<CR>]])
     nnoremap('<leader>fq', [[<Cmd>lua TelescopeQuickFix()<CR>]])
+    nnoremap('<leader>ft', [[<Cmd>lua TelescopeTags()<CR>]])
   end,
 }
 

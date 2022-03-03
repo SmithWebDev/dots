@@ -17,14 +17,17 @@ M.plugin = {
       direction = 'vertical',
       popup = 5000,
       popup_pos = "SE",
-      autoclose = 0,
+      autoclose = 2000,
     })
 
 
     --keybindings
+
+    nnoremap('<leader>nt',          ":lua require'nterm.main'.term_toggle()<CR>") --,        Toggle Nterm
+
     -- Rails commands
-    nnoremap('<leader><leader>rbi',          ":lua require'nterm.main'.term_send('bundle install')<CR>") --,        Bundle Install Command
-    nnoremap('<leader><leader>rbu',          ":lua require'nterm.main'.term_send('bundle update')<CR>") --,         Bundle Update Command
+    --nnoremap('<leader><leader>rbi',          ":lua require'nterm.main'.term_send('bundle install')<CR>") --,        Bundle Install Command
+    --nnoremap('<leader><leader>rbu',          ":lua require'nterm.main'.term_send('bundle update')<CR>") --,         Bundle Update Command
   end
 
 }

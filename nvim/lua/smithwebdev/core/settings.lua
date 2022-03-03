@@ -30,8 +30,9 @@ o.softtabstop = 2
 
 -- Line Options --
 o.textwidth = 80
-o.listchars = 'space:·,tab:→ ,trail:·,extends:…,eol:↩'
 o.showbreak = '++'
+o.listchars = 'tab:→ ,trail:·,extends:…,eol:↩' --space:·,
+o.showbreak = '+++'
 o.scrolloff = 999
 o.sidescrolloff = 15
 o.list = true
