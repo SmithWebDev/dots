@@ -29,6 +29,8 @@ M.plugin = {
     nnoremap('<leader><leader>rbu',    ':!bundle update<CR>') --,  Bundle Update Command
 
     -- Rails Database Commands
+    nnoremap('<leader><leader>rdbc',   ':!rails db:create<CR>') --,           Rails DB:Migrate Command
+    nnoremap('<leader><leader>rdbd',   ':!rails db:drop<CR>') --,           Rails DB:Migrate Command
     nnoremap('<leader><leader>rdbm',   ':!rails db:migrate<CR>') --,           Rails DB:Migrate Command
     nnoremap('<leader><leader>rdbr',   ':!rails db:rollback<CR>') --,             Rails DB:Setup Command
     nnoremap('<leader><leader>rdbs',   ':!rails db:setup<CR>') --,             Rails DB:Setup Command
