@@ -18,7 +18,8 @@ M.plugin = {
     'quangnguyen30192/cmp-nvim-tags',      -- https://github.com/quangnguyen30192/cmp-nvim-tags
     'quangnguyen30192/cmp-nvim-ultisnips', -- https://github.com/quangnguyen30192/cmp-nvim-ultisnips
     'windwp/nvim-autopairs',               -- https://github.com/windwp/nvim-autopairs
-    'ray-x/cmp-treesitter',                -- https://github.com/ray-x/cmp-treesitter  
+    'ray-x/cmp-treesitter',                -- https://github.com/ray-x/cmp-treesitter
+    'saadparwaiz1/cmp_luasnip',            -- https://github.com/saadparwaiz1/cmp_luasnip
   },
  
   config = function()
